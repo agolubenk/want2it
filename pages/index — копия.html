@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Checkout example · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <style>
+        body{
+            background: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%); 
+            background-attachment: fixed;
+        }
+@media (max-width: 991.98px) {
+        .back{
+            opacity: 0.8;
+            background-image: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%);
+            background-attachment: fixed;
+        }
+        .backs{
+            opacity: 1;
+            background: #272727;
+            z-index: 100;
+    }
+        }
+@media (min-width: 991.98px) {
+        .large-logo{
+            width: 20vw;
+    }
+        }
+@media (min-width: 761.98px) {
+        .large-logo{
+            width: 36vw;
+    }
+        }
+@media (max-width: 761.97px) {
+        .large-logo{
+            width: 25vw;
+    }
+        }
+@media (max-width: 700.97px) {
+        .large-logo{
+            width: 50vw;
+    }
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+        .bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.rounded-4 { border-radius: .5rem; }
+.rounded-5 { border-radius: .75rem; }
+.rounded-6 { border-radius: 1rem; }
+
+.modal-sheet .modal-dialog {
+  width: 380px;
+  transition: bottom .75s ease-in-out;
+  background-image: background: rgba(0, 170, 238, 0.9);
+}
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}
+
+.modal-alert .modal-dialog {
+  width: 380px;
+  background-image: background: rgba(0, 170, 238, 0.9);
+}
+
+.border-right { border-right: 1px solid #eee; }
+
+.modal-tour .modal-dialog {
+  width: 380px;
+  background-image: background: rgba(0, 170, 238, 0.9);
+}
+
+.modal-content {
+  background: background: rgba(0, 170, 238, 0.9);
+}
+.bg-darks {
+    --bs-bg-opacity: 0.2;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+.bg-darkss {
+    --bs-bg-opacity: 0.6;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+        .puls {
+  -webkit-border-radius: 15px;
+  border-radius: 64px;
+  padding: 4px 9px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: transparent;
+    box-shadow: 0 0 2px transparent;
+  }
+
+  50% {
+    --bs-bg-opacity: 0.5;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+    box-shadow: 0 0 9px #272727;
+  }
+
+  100% {
+    --bs-bg-opacity: 0.9;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+  }
+}
+
+.puls {
+  animation: glowing 1500ms infinite;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.orderbtn {
+  position: relative;
+  overflow: hidden;
+  transition: background 400ms;
+  color: #fff;
+  background-color: #6200ee;
+  font-family: 'Roboto', sans-serif;
+  outline: 0;
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+  cursor: pointer;
+}
+
+.orderbtn1 {
+  position: relative;
+  overflow: hidden;
+  transition: background 400ms;
+  color: #fff;
+  background-color: #6200ee;
+  font-family: 'Roboto', sans-serif;
+  outline: 0;
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+  cursor: pointer;
+}
+
+span.ripple1 {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple1 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple1 {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body>
+ <header class="bg-darkss text-white d-flex text-center" id="search-menu" style="height: calc(100vh - 56px); min-height: 510px;">
+    <div class="container py-5 position-relative">
+        
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4 figure-img img-fluid large-logo" src="big-logo.png" alt="">
+      <h2 class="pt-3 element" style="height: 80px;"> &nbsp;</h2> &nbsp;
+        <button class="orderbtn btn btn-lg rounded-5 d-lg-none" href="#item3">Оставить заявку</button>
+        <div class=" d-none d-lg-block"><button class="orderbtn btn btn-lg rounded-5" href="#item2">Оставить заявку</button></div>
+      <p class="lead pt-3">Кадровое агенство по профессиональному подбору IT специалистов любого грейда и любой сложности. Вы соберем Вашу команду мечты!</p>
+    </div>        
+    <div class="position-absolute bottom-0 start-50" style="margin-left: -16px;">
+      <a href="#item1" class="py-3 h4 bi bi-arrow-down puls text-white"></a>
+    </div>
+
+    </div>
+
+  </header>
+ <header class="navbar navbar-expand-lg sticky-top text-white bg-darkss menu item" id="item1">
+<div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Хочу в IT</a>
+    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+      <i class="bi bi-menu-button-fill text-white"></i>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse back backs" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" href="#">Услуги</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" href="#">Цены</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" href="#">Блог</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" href="#">О нас</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" href="#">Контакты</a>
+        </li>
+        <li class="nav-item d-none d-lg-block dropup lg-menu">
+          <a class="nav-link text-white dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Профиль</a>
+          <ul class="dropdown-menu bg-darkss" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item text-white bg-darkss" href="#">Вакансии (8)</a></li>
+            <li><a class="dropdown-item text-white bg-darkss" href="#">Документы</a></li>
+            <li><a class="dropdown-item text-white bg-darkss" href="#">Оповещения (3)</a></li>
+            <li><a class="dropdown-item text-white bg-darkss" href="#">Настройки</a></li>
+            <li><a class="dropdown-item text-white bg-darkss" href="#">Выход</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control d-none d-lg-block me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
+        <button class="btn btn-outline-warning d-none d-lg-block" type="submit">Искать</button>
+      </form>
+        <div class="d-block d-flex justify-content-between d-lg-none pt-3">
+    <a class="navbar-brand text-white" href="#">Хочу в IT</a>
+    <button type="button" class="btn-close btn-close-white p-3" data-bs-dismiss="modal" id="navbar1" aria-label="Close"></button>
+            </div>
+        <div class="d-sm-block d-lg-none d-grid gap-3">
+        <div class="py-2">
+                    <div class="collapse show" id="collapseProfile">
+
+      <form class="d-flex py-2">
+        <input class="form-control form-control-lg me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
+        <button class="btn btn-outline-warning btn-lg" type="submit">Искать</button>
+      </form>
+                <ul class="navbar-nav gap-2 pt-2">
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-warning btn-lg text-dark" href="#"><i class="bi bi-plus fa-lg"></i> Сделать заказ</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="#"><i class="bi bi-journal-text fa-lg"></i> Услуги</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="#"><i class="bi bi-coin fa-lg"></i> Цены</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="#"><i class="bi bi-newspaper fa-lg"></i> Блог</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="#"><i class="bi bi-chat-right-quote fa-lg"></i> О нас</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="#"><i class="bi bi-phone-fill fa-lg"></i> Контакты</a></li>
+                </ul>
+                     </div>
+                </div>
+        <div class="py-2 pt-0">
+                    <div class="collapse" id="collapseProfile">
+                        <div class="card-body d-grid gap-2" style="background-color: transparent">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                            <h3 class="text-warning" style="opacity: 0.8"><i class="bi bi-person-circle"></i>&nbsp;Голубенко Андрей</h3>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                            <h4 class="text-warning" style="opacity: 0.8"><i class="bi bi-building"></i>&nbsp;М21 Хант</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                            <p class="text-warning" style="opacity: 0.7"><i class="bi bi-telephone-fill"></i>&nbsp;+375255553322<br>
+                                    <i class="bi bi-envelope"></i>&nbsp;pochtovi_golub@hotmail.com
+                                    </p>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                            <span class="h4 text-warning" style="opacity: 0.8">Вакансии:</span>
+                                    <span class="badge bg-primary">в работе: 2</span>&nbsp;<span class="badge bg-danger">ожидают оплаты: 1</span>&nbsp;<span class="badge bg-success">закрыты: 5</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning"><i class="bi bi-inboxes-fill fa-lg"></i> Вакансии (8)</button>
+                            <button class="btn btn-warning"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</button>
+                            <button class="btn btn-warning"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</button>
+                            <button class="btn btn-warning"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</button>
+                        </div>
+                    </div>
+                </div>
+        <div class="d-grid gap-2 py-2 fixed-bottom text-end card-body">
+                    <a id="menu-clicker" class="btn btn-warning text-dark btn-lg" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseProfile"><i class="bi bi-emoji-sunglasses-fill fa-lg"></i> Профиль</a>
+             <!--       <button class="btn btn-lg btn-warning"><i class="bi bi-person-workspace fa-lg"></i> Sign-up</button>
+                    <button class="btn btn-outline-warning btn-lg"><i class="bi bi-door-open-fill fa-lg"></i> Sign-in</button> -->
+                    <button class="btn btn-outline-warning btn-lg"><i class="bi bi-box-arrow-right fa-lg"></i> Выход</button>
+                </div>
+            </div>
+        
+
+    </div>
+  </div>
+  </header>
+
+      
+  <main class="ms-3 pe-4 pt-4">
+    <div class="row g-4 mx-auto">
+      <div class="col-md-7 col-lg-8 mx-auto pt-2">
+    <div class="py-2 text-center pt-3 bg-darks rounded-5 my-auto container" style="height: 510px;">
+      <img class="d-block img-fluid mx-auto mt-5 mb-4" src="big-logo.png" alt="" style="max-width: 280px;">
+      <h2 class="text-warning">Checkout form</h2>
+      <p class="lead text-white">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+    </div>
+<div id="item3"></div>
+<!--   <div class="modal modal-signin position-static d-block pt-3" tabindex="-1" role="dialog" id="modalSignin">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-5 shadow bg-darks">
+      <div class="pt-3 pb-3 text-center border-bottom-0">
+         <h5 class="modal-title">Modal title</h5>
+        <h2 class="fw-bold mb-0">Sign up</h2>
+      </div>
+
+      <div class="modal-body p-3 pt-0">
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control bg-darks rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control bg-darks rounded-4" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-4" style="background-color: #00a86b;" type="submit">Sign up</button>
+          <button class="w-100 mb-2 btn btn-lg rounded-4" style="background-color: #c21c31;" type="submit">Clear</button>
+          <small class="" style="color: #263340; opacity:0.75">By clicking Sign up, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
+            Sign up with Twitter
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+            Sign up with Facebook
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+            Sign up with GitHub
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+      </div>
+      <div class="col-md-5 col-lg-4 mx-auto pt-3" id="item2">
+          <div class="p-3 rounded-5 bg-darks" style="margin: -10px; margin-left: 0px;">
+        <h4 class="mb-3">
+          <span class="text-warning">Оформить заявку</span>
+        </h4>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
+            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput0" placeholder="Компания">
+            <label for="floatingInput0" class="text-warning">Из какой Вы компании?</label>
+          </div>
+              
+        
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
+            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+          </div>
+              
+        
+          <div class="form-floating mb-3">
+            <input type="mail" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email">
+            <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
+          </div>
+              
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
+            <label for="floatingInput3" class="text-warning">Кого Вы ищете?</label>
+          </div>      
+        
+            <button class="btn btn-lg mb-3 orderbtn1 w-100" href="#">Подтвердить</button>
+              
+              </div>
+      </div>
+    </div>
+      <br>
+    <div class="row g-5">
+      <div class="col-md-12 col-lg-9 mx-auto pt-3">
+<div class="container-fluid p-4 bg-darks rounded-5">
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<hr>
+<div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+ <hr>
+
+
+<div class=""></div>
+  <footer class="pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017–2021 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="form-validation.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script>
+  var typed = new Typed('.element', {
+  // Waits 1000ms after typing "First"
+    strings: ['print("Hello World")', 'print("Хочу в IT")', 'print("Разыскивается IT-специалист")'],
+    typeSpeed: 96,
+    backSpeed: 0,
+    fadeOut: true,
+    loop: true,
+    cursorChar: '',
+
+});
+</script>
+      <script>
+      var scrolled;
+window.onscroll = function() {
+    scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    hei = $("#search-menu").height();
+    if(scrolled > hei){
+        $(".menu").css({"background": "#343a40"})         
+        $(".menu").removeClass("bg-darkss")
+        $(".lg-menu").removeClass("dropup")
+        $(".lg-menu").addClass("dropdown")
+    }
+    if(
+hei > scrolled){
+        $(".menu").addClass("bg-darkss")
+        $(".lg-menu").addClass("dropup")
+        $(".lg-menu").removeClass("dropdown")
+    }
+
+}
+$('[href^="#"]').on('click', function(){
+  let href = $(this).attr('href'), elem = $(document).find(href);
+  if(elem.length > 0) {
+    let posY = elem.eq(0).offset().top;
+    $('html, body').animate({
+      scrollTop: posY
+    }, 1000);
+  }
+  return false;
+});
+
+function createRipple(event) {
+  const button = event.currentTarget;
+
+  const circle = document.createElement("span");
+  const diameter = Math.max(button.clientWidth, button.clientHeight);
+  const radius = diameter / 2;
+
+  circle.style.width = circle.style.height = `${diameter}px`;
+  circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+  circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+  circle.classList.add("ripple");
+
+  const ripple = button.getElementsByClassName("ripple")[0];
+
+  if (ripple) {
+    ripple.remove();
+  }
+
+  button.appendChild(circle);
+}
+
+const buttons = document.getElementsByClassName("orderbtn");
+for (const button of buttons) {
+  button.addEventListener("click", createRipple);
+}
+      </script>
+
+      
+  </body>
+</html>
