@@ -22,6 +22,55 @@
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <style>
+
+.opacity-50 { opacity: .5; }
+.opacity-75 { opacity: .75; }
+
+.list-group {
+  width: auto;
+  max-width: 460px;
+  margin: 4rem auto;
+}
+
+.form-check-input:checked + .form-checked-content {
+  opacity: .5;
+}
+
+.form-check-input-placeholder {
+  pointer-events: none;
+  border-style: dashed;
+}
+[contenteditable]:focus {
+  outline: 0;
+}
+
+.list-group-checkable {
+  display: grid;
+  gap: .5rem;
+  border: 0;
+}
+.list-group-checkable .list-group-item {
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.list-group-item-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.list-group-item-check:hover + .list-group-item {
+  background-color: var(--bs-light);
+}
+.list-group-item-check:checked + .list-group-item {
+  color: #fff;
+  background-color: var(--bs-blue);
+}
+.list-group-item-check[disabled] + .list-group-item,
+.list-group-item-check:disabled + .list-group-item {
+  pointer-events: none;
+  filter: none;
+  opacity: .5;
+}
         body{
             background: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%); 
             background-attachment: fixed;
@@ -698,24 +747,7 @@ a.preicons
     <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
 </symbol>
 </svg>
- <header class="bg-darkss text-white d-flex text-center" id="search-menu" style="height: calc(100vh - 56px); min-height: 510px;">
-    <div class="container py-5 position-relative">
-        
-    <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4 figure-img img-fluid large-logo" src="big-logo.png" alt="">
-      <h2 class="pt-3 element" style="height: 80px;"> &nbsp;</h2> &nbsp;
-        <button class="orderbtn btn btn-lg rounded-5 d-lg-none" href="#item3">Оставить заявку</button>
-        <div class=" d-none d-lg-block"><button class="orderbtn btn btn-lg rounded-5" href="#item2">Оставить заявку</button></div>
-      <p class="lead pt-3">Кадровое агенство по профессиональному подбору IT специалистов любого грейда и любой сложности. Вы соберем Вашу команду мечты!</p>
-    </div>        
-    <div class="position-absolute bottom-0 start-50" style="margin-left: -16px;">
-      <a href="#item1" class="py-3 h4 bi bi-arrow-down puls text-white"></a>
-    </div>
-
-    </div>
-
-  </header>
- <header class="navbar navbar-expand-lg sticky-top text-white bg-darkss menu item" id="item1">
+<header class="navbar navbar-expand-lg sticky-top text-white bg-darkss menu item" id="search-menu">
 <div class="container-fluid">
     <a class="navbar-brand text-white" href="#">Хочу в IT</a>
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -835,195 +867,78 @@ a.preicons
   </header>
   <main class="ms-3 pe-4 pt-4">
     <div class="row g-4 mx-auto">
-      <div class="col-md-7 col-lg-8 mx-auto pt-1">
-    <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container" style="height: 510px;">
-      <img class="d-block img-fluid mx-auto mt-5 mb-4" src="big-logo.png" alt="" style="max-width: 240px;">
-      <h2 class="text-warning">Кадровое агентство "Хочу в IT" </h2>
-      <p class="lead text-white">осуществляет подбор IT персонала любого уровня сложности. </p><hr><span class="d-sm-block d-none text-dark">Мы работаем с применением различных техник в части поиска и подбора персонала, используем как классические инструменты, так и современные методики для оценки и поиска сотрудников.</span><span class="text-info">Ваша команда в наших руках!</span>
+      <div class="col-md-7 col-lg-8 mx-auto pt-3 pb-3 mb-1 order-md-last" id="item2">
+                  <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container" style="height: 510px;">
+      <img class="d-block img-fluid mx-auto mt-5 mb-4" src="v-promo.png" alt="" style="max-width: 240px;">
+      <hr><h1 class="text-info">Наши вакансии</h1>
+        <span class="badge bg-info">C++</span>&nbsp;<span class="badge bg-info">javascript</span>&nbsp;<span class="badge bg-info">java</span>&nbsp;<span class="badge bg-info">QA</span>&nbsp;<span class="badge bg-info">python</span>&nbsp;<span class="badge bg-info">.NET</span>&nbsp;<span class="badge bg-info">android</span>&nbsp;<span class="badge bg-info">devops</span>&nbsp;<span class="badge bg-info">php</span>&nbsp;<span class="badge bg-info">nodejs</span>&nbsp;<span class="badge bg-info">angular</span>p;<span class="badge bg-info"></span>&nbsp;<span class="badge bg-info">ruby</span>&nbsp;<span class="badge bg-info">typescript</span>&nbsp;<span class="badge bg-info">UI/UX</span>&nbsp;<span class="badge bg-info">Solution architect</span>
     </div>
+      </div>
+      <div class="col-md-5 col-lg-4 mx-auto pt-3 pb-3 mb-1">
+           <div class="py-2 pt-2 bg-darks rounded-5 my-auto container">
+          <h2 class="text-warning py-2">Список вакансий:</h2>
+          <ul>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer | YourSoft  |  $2000 - 3000</a><br>
+                <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer | YourSoft  |  $2000 - 3000</a><br>
+              <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer | YourSoft  |  $2000 - 3000</a><br>
+                <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer | YourSoft  |  $2000 - 3000</a><br>
+              <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer | YourSoft  |  $2000 - 3000</a><br></li>
+          
+          </ul>
+          </div>
 <div id="item3"></div>
-<!--   <div class="modal modal-signin position-static d-block pt-3" tabindex="-1" role="dialog" id="modalSignin">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content rounded-5 shadow bg-darks">
-      <div class="pt-3 pb-3 text-center border-bottom-0">
-         <h5 class="modal-title">Modal title</h5>
-        <h2 class="fw-bold mb-0">Sign up</h2>
-      </div>
 
-      <div class="modal-body p-3 pt-0">
-        <form class="">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control bg-darks rounded-4" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control bg-darks rounded-4" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-4" style="background-color: #00a86b;" type="submit">Sign up</button>
-          <button class="w-100 mb-2 btn btn-lg rounded-4" style="background-color: #c21c31;" type="submit">Clear</button>
-          <small class="" style="color: #263340; opacity:0.75">By clicking Sign up, you agree to the terms of use.</small>
-          <hr class="my-4">
-          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
-            Sign up with Twitter
-          </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
-            Sign up with Facebook
-          </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
-            Sign up with GitHub
-          </button>
-        </form>
       </div>
     </div>
-  </div>
-</div> -->
-      </div>
-      <div class="col-md-5 col-lg-4 mx-auto pt-3 pb-3 mb-1" id="item2">
-          <div class="p-3 pb-4 rounded-5 bg-darks" style="margin-right: -10px; margin-top: -10px; margin-bottom: 10px; margin-left: 0px;">
-        <h4 class="mb-3">
-          <span class="text-warning">Оформить заявку</span>
-        </h4>
-        
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
-            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
-          </div>
-        
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput0" placeholder="Компания">
-            <label for="floatingInput0" class="text-warning">Из какой Вы компании?</label>
-          </div>
-              
-        
-          <div class="form-floating mb-3">
-            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
-            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
-          </div>
-              
-        
-          <div class="form-floating mb-3">
-            <input type="mail" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email">
-            <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
-          </div>
-              
-        
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
-            <label for="floatingInput3" class="text-warning">Кого Вы ищете?</label>
-          </div>      
-        
-            <button type="button" class="w-100 orderbtn btn btn-lg">Подтвердить</button>
-              
-              </div>
-      </div>
-    </div>
-    <div class="row g-5">
-      <div class="mx-2 mx-auto">
-<div class="container-fluid ms-1 row p-4 bg-darks rounded-5 mx-auto">
-<div class="col-lg-11 col-sm-12 mx-auto">
-
-    <div class="container px-2" id="featured-3">
-    
-    <div class="row g-1 pt-4 row-cols-1 row-cols-lg-4 row-cols-md-2">
-      <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#checkkk"/></svg>
-        </div>
-        <h2 class="text-warning">Качество</h2>
-        <p class="text-white">Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.</p>
-      </div>
-      <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#spedomi"/></svg>
-        </div>
-        <h2 class="text-warning">Скорость</h2>
-        <p class="text-white">Помимо качественного подбора мы еще и максимально быстрые! Быстро не значит плохо. Уже через неделю у Вас будут первые кандидаты.</p>
-      </div>
-      <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#mortarbo"/></svg>
-        </div>
-        <h2 class="text-warning">Опыт</h2>
-        <p class="text-white">В нашем портфолио собраны кейсы из разных доменов. Мы вели и ведем поиск сотрудников абсолютно разного уровня сложности, ориентируясь на наши компетенции и профессионализм.</p>
-      </div>
-      <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#signpost"/></svg>
-        </div>
-        <h2 class="text-warning">Гибкий подход</h2>
-        <p class="text-white">Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и работодателя, а также специфику корпоративной культуры, в которую идет кандидат.</p>
+ 
+   <div class="row g-4 mx-auto">
+      <div class="col-md-7 col-lg-8 mx-auto pt-3 pb-3 mb-1" id="item2">
+                  <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container">
+      <h1 class="text-info py-4">Наши партнеры</h1>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 text-center mx-auto my-auto">
+            <div class="col container my-1"><img src="benefits-logo.svg" width="100vw"></div>
+            <div class="col container my-1"><img src="deriv-logo.svg" width="100vw"></div>
+            <div class="col container my-1"><img src="seedilon-logo.svg" width="100vw"></div>
+            <div class="col container my-1"><img src="vidcrunch-logo.svg" width="100vw"></div>
+            <div class="col container my-1"><img src="yoursoft-logo.svg" width="100vw"></div>
+            <div class="col container my-1"><img src="alfabank-logo.jfif" width="100vw"></div>
+            <div class="col container my-1"><img src="Premiumsoft-logo.jfif" width="100vw"></div>
        
-      </div>
+        </div>
     </div>
-  </div>
-    <hr>
-    
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 text-center">
-      <div class="col">
-        <div class="card mb-5 mt-2 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-white bg-primary border-primary">
-            <h4 class="my-0 fw-normal">Подбор IT-специалистов</h4>
-          </div>
-          <div class="card-body" style="height: 264px;">
-            <h1 class="card-title pricing-card-title">от 800 <small class="text-muted fw-light">USD</small></h1>
-<i>после трудоустройства</i>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Ищем только мы</li>
-              <li>Одна гарантийная замена</li>
-              <li>Релевантные кандидаты</li>
-              <li>Полное сопровождение</li>
-            </ul>
-            <button type="button" class="mt-3 w-100 orderbtn btn btn-lg btn-primary">Начать поиск</button>
-          </div>
-        </div>
       </div>
-      <div class="col">
-        <div class="card mb-5 mt-2 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-white bg-primary border-primary">
-            <h4 class="my-0 fw-normal">Offboarding и увольнение</h4>
+      <div class="col-md-5 col-lg-4 mx-auto pt-3 pb-3 mb-1 order-md-last">
+           <div class="py-2 pt-2 bg-darks rounded-5 my-auto container">
+          <h3 class="text-warning py-4">Архив вакансий:</h3>
+          <ul>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer</a><br>
+                <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer</a><br>
+              <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer</a><br>
+                <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+            <li class="py-2"><a class="text-white h5" style="text-decoration: none;">Java developer</a><br>
+              <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>&nbsp;
+              </li>
+          
+          </ul>
           </div>
-          <div class="card-body" style="height: 264px;">
-            <h1 class="card-title pricing-card-title">от 20 <small class="text-muted fw-light">USD</small></h1>
-<i>за уволенного</i>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Независимая оценка</li>
-              <li>Полноценное интервью</li>
-              <li>Анализ рисков</li>
-              <li>Увольнение без боли</li>
-            </ul>
-            <button type="button" class="mt-3 w-100 btn orderbtn btn-lg btn-primary">Узнать подробнее</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-3 mt-2 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-white bg-primary border-primary">
-            <h4 class="my-0 fw-normal">Дополнительные услуги</h4>
-          </div>
-          <div class="card-body" style="height: 264px;">
-            <h1 class="card-title pricing-card-title">от 20 <small class="text-muted fw-light">USD</small></h1>
-<i>за выполненную услугу</i>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Составление резюме</li>
-              <li>Карьерные консультации</li>
-              <li>Online обучение</li>
-              <li>Аутстаф партнерство</li>
-            </ul>
-            <button type="button" class="mt-3 w-100 orderbtn btn btn-lg btn-primary">Связаться</button>
-          </div>
-        </div>
-      </div>
-    </div>
+<div id="item3"></div>
 
-    </div>
       </div>
     </div>
-    </div>
+  
   </main>
  <hr>
     <footer class="site-footer footer fixed-buttom" id="footer">
