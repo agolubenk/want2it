@@ -201,6 +201,10 @@
     --bs-bg-opacity: 0.95;
     background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
 }
+.bg-darksl {
+    --bs-bg-opacity: 0.99;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
         .puls {
   -webkit-border-radius: 15px;
   border-radius: 64px;
@@ -639,19 +643,10 @@ a.preicons
   }
 }
 
-    @media (max-width: 991.98px) {
 .scroll-table-body {
-    height: 330px;
+	height: 290px;
 	overflow-x:auto;
 	margin-top: 0px;
-}
-}
-    @media (min-width: 991.99px) {
-.scroll-table-body {
-	height: 440px;
-	overflow-x:auto;
-	margin-top: 0px;
-}
 }
 .scroll-table table {
 	width:100%;
@@ -662,17 +657,23 @@ a.preicons
 	font-weight: bold;
 	text-align: left;
 	border: none;
-	padding: 10px 15px;
 }
 .scroll-table tbody td {
 	text-align: left;
-	padding: 10px 15px;
-	font-size: 14px;
 	vertical-align: top;
 }
 .scroll-table tbody tr:nth-child(even){
 }
-
+/* Стили для скролла */
+::-webkit-scrollbar {
+ width: 6px;
+} 
+::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
     </style>
 
     
@@ -870,14 +871,14 @@ a.preicons
     </div>
   </div>
   </header>
-  <main class="ms-3 pe-4 pt-4">
-    <div class="row my-auto g-4 mx-auto py-4">
-     <div class="col-lg-4 col-sm-12 g-4 mx-auto py-4 text-center my-auto"><img src="b-promo.png" class="img-fluid" alt="..." style="max-width: 320px;"><h1 class="pt-2 text-info text-center">Блог компании</h1></div>
-        <div class="col-lg-4 col-md-5 col-sm-12 g-4 mx-auto py-4" style="width: 94%; max-width: 360px; height: 380px;">
+  <main class="ms-3 pe-4">
+    <div class="row my-auto g-2 mx-auto py-1">
+     <div class="col-lg-4 col-md-6 col-sm-12 g-4 mx-auto py-2 text-center my-auto"><img src="b-promo.png" class="img-fluid" alt="..." style="max-width: 320px;"><h1 class="pt-2 text-info text-center">Блог компании</h1></div>
+        <div class="col-lg-4 col-md-6 col-sm-12 g-4 mx-auto py-2" style="width: 94%; max-width: 360px; height: 420px;">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
        <div class="col-12 carousel-item active">
-     <div class="card shadow-sm rounded-5 bg-darks" style=" height:340px;">
+     <div class="card shadow-sm rounded-5 bg-darks" style=" height:380px;">
         <a class="overflow-hidden" href="#" data-bs-toggle="modal" data-bs-target="#modalImg-1" style="height: auto">  
             <img class="img-fluid rounded-5" src="blog-img-c-1.png" width="100%" height="100%"></a>
             <div class="card-body">
@@ -890,7 +891,7 @@ a.preicons
           </div>
         </div>
        <div class="col-12 carousel-item">
-     <div class="card shadow-sm rounded-5 bg-darks" style=" height:340px;">
+     <div class="card shadow-sm rounded-5 bg-darks" style=" height:380px;">
         <a class="overflow-hidden" href="#" data-bs-toggle="modal" data-bs-target="#modalImg-1" style="height: auto">  
             <img class="img-fluid rounded-5" src="blog-img-c-2.png" width="100%" height="100%"></a>
             <div class="card-body">
@@ -903,14 +904,14 @@ a.preicons
           </div>
         </div>
        <div class="col-12 carousel-item">
-     <div class="card shadow-sm rounded-5 bg-darks" style=" height:340px;">
+     <div class="card shadow-sm rounded-5 bg-darks" style=" height:380px;">
         <a class="overflow-hidden" href="#" data-bs-toggle="modal" data-bs-target="#modalImg-1" style="height: auto">  
             <img class="img-fluid rounded-5" src="big-logo.png" width="100%" height="100%"></a>
             <div class="card-body">
                  <h4 class="card-title text-white">Правильный сорсинг</h4>
                 <p class="card-text text-white" style="opacity: 0.8; margin-bottom: -3px; margin-top: -6px;">Мы расскажем, как сорсить правильно!</p>
     <p class="card-text"><span class="badge bg-info text-dark">#сорсинг</span>&nbsp;<span class="badge bg-info text-dark">#поиск</span>&nbsp;<span class="badge bg-info text-dark">#рекрутинг</span></p>
-                   <button class="btn btn-outline-info px-5 w-100">Прочитать</button>
+                   <button class="btn btn-outline-info px-5 w-100" data-bs-toggle="modal" data-bs-target="#blog-2204171">Прочитать</button>
                 <p class="card-text text-end" style="margin-bottom: -10px;"><small class="text-white" style="font-size: 10px; opacity: 0.6">27 дней назад</small></p>
             </div>
           </div>
@@ -923,33 +924,52 @@ a.preicons
   </button>
 </div>
       </div>
-     <div class="col-lg-4 d-md-7 col-sm-12 g-4 mx-auto py-4">
-                   <div class="py-2 pt-2 bg-darks rounded-5 my-auto container" style=" height: 380px;">
-          <h3 class="text-warning py-4">Все статьи:</h3>
+     <div class="col-lg-4 col-sm-12 g-2 mx-auto pt-4">
+                   <div class="py-2 pt-4 bg-darks rounded-5 my-auto container" style=" height: 380px;">
+
+     <div class="scroll-table">
+ <table>
+  <thead>
+   <tr>
+    <th><h3 class="text-warning py-2">Все статьи:</h3></th>
+   </tr>
+  </thead>
+ </table> 
+    <div class="scroll-table-body">
+  <table>
+   <tbody>
+    <tr>
+     <td scope="row" class="d-grid gap-2">
           <ul class="fa-ul container">
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:16px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
           </ul>
+        </td>
+       </tr>
+      </tbody>
+        </table>
           </div>
         </div>
+
+         </div>
+        </div>
       </div>
-  
   </main>
  <hr>
     <footer class="site-footer footer fixed-buttom" id="footer">
@@ -1035,7 +1055,46 @@ a.preicons
 </footer>  
 
 <!-- Modals -->
-      <div class="modal fade" id="callMeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
+      <div class="modal fade" id="blog-2204171" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="blog-2204171Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+    <div class="modal-content text-white bg-darksl rounded-5 border-white">
+       <div class="modal-header" style="border:0">
+        <h5 class="modal-title" id="blog-2204171Label">Как правильно сорсить  <a class="badge bg-info text-dark rounded-6"><i class="bi bi-chevron-right"></i></a></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            
+         Статья подготовлена нашими друзьями — EvoTalents.
+
+Работать в IT-рекрутинге – это как ездить на велосипеде по канату, при этом жонглируя. С каждым годом требования компаний к их сотрудникам растут, и рынок не всегда поспевает за этими запросами. Нам, рекрутерам, остаётся лишь набраться терпения и изобретательности, чтобы найти «тех самых» кандидатов.
+
+Мы развиваем EvoTalents как IT рекрутинговое агентство с большим упором на сорсинг. На своём опыте мы не один раз убеждались, что сорсинг приносит свои плоды в работе с самыми сложными техническими вакансиями. Например, найти Clojure разработчика или опытного Full Stack Engineer, не привлекая LinkedIn и Gitter? Ни слова больше! Давайте рассмотрим кейсы нашей команды.
+
+1. Подключайте SoundCloud для персонализации
+Люда Зюман – Рекрутмент Партнер в EvoTalents и преподаватель в EvoTalents.School. Её секрет успешного поиска кандидатов – работать с вакансиями, как настоящий детектив, не упуская ни одну деталь, и делать акцент на персонализированных текстах имейлов и сообщений.
+
+Люда уверена, что сорсинг будет продуктивным, если экспериментировать в подходах. К примеру, наш клиент, продуктовая компания в сфере телемедицины, сейчас ищет опытного Full Stack Engineer в новую команду. Одна из особенностей задач заключается в имплементации сторонних сервисов в один из продуктов. Составив портрет кандидата, мы поняли, что таких инженеров сравнительно немного на рынке. 
+
+Найти такого инженера Люде удалось в LinkedIn, но она так и не дождалась от него ответа. Тем не менее, вариант перенести кандидата на этап “Not responding” не рассматривался. В итоге выбрав имейл как канал для связи, Люда решила составить «цепляющую» тему письма, так как это один из ключевых элементов высокого open rate. Чтобы заинтересовать кандидата, она выбрала музыкальную тему и начала поиск композиций, которые могли бы заинтересовать инженера.
+
+Как у нее получилось найти ту самую композицию?
+
+
+Для этого ​​достаточно открыть профиль кандидата в социальных сетях и подсмотреть там эту информацию. В крупных социальных сетях обычно есть соответствующий раздел с фильмами, музыкой, книгами, впечатлениями и другой личной информацией о пользователе. Также можно просто пролистать ленту для поиска вспомогательной информации. 
+          Кроме того, на страницах пользователей можно встретить ссылки на профиль в SoundCloud, где могут быть как загруженные композиции, так и избранная музыка в плейлистах.
+
+
+Отправив персонализированное письмо кандидату, Люда получила долгожданный отклик. И несмотря на то, что кандидат был занят релизом в текущий момент, нам получилось не только достучаться до него , но и завязать общение и остаться на связи до момента, когда кандидат будет готов пройти интервью.
+
+Теперь рассмотрим, как работает поиск непосредственно на SoundCloud. На платформе есть простой внутренний поиск по таким параметрам, как:
+
+People
+Location (города рандомно добавляются в зависимости от того, страну или город вы указываете в поисковом поле)
+Ключевые слова (транслитерация не работает, поэтому здесь приходится перебирать названия указанных слов на разных языках).
+      </div>
+    </div>
+  </div>
+</div>      <div class="modal fade" id="callMeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content text-white bg-darksm rounded-5 border-white">
       <div class="modal-header" style="border:0">
