@@ -672,6 +672,16 @@ a.preicons
 .scroll-table tbody tr:nth-child(even){
 }
 
+/* Стили для скролла */
+::-webkit-scrollbar {
+ width: 6px;
+} 
+::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
     </style>
 
     
@@ -869,7 +879,7 @@ a.preicons
     </div>
   </div>
   </header>
-  <main class="ms-3 pe-4 pt-4">
+  <main class="ms-3 pe-4 pt-5">
     <div class="container g-4 pb-5 mx-auto">
                   <div class="py-2 text-center pt-2 bg-darks rounded-5 px-1 my-auto pb-3 container">
       <img class="d-block img-fluid mx-auto mt-5 mb-4" src="a-brand.png" alt="">
@@ -882,31 +892,31 @@ a.preicons
     <div class="container pb-5">
         <div class="px-3 py-3 row  mx-auto pt-4 bg-darks rounded-5 row-cols-1 row-cols-lg-4 row-cols-md-2">
       <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
+        <div class="feature-icon bg-info text-dark bg-gradient">
           <svg class="bi" width="1em" height="1em"><use xlink:href="#checkkk"/></svg>
         </div>
-        <h2 class="text-warning">Качество</h2>
+        <h2 class="text-info">Качество</h2>
         <p class="text-white">Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.</p>
       </div>
       <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
+        <div class="feature-icon bg-info text-dark bg-gradient">
           <svg class="bi" width="1em" height="1em"><use xlink:href="#spedomi"/></svg>
         </div>
-        <h2 class="text-warning">Скорость</h2>
+        <h2 class="text-info">Скорость</h2>
         <p class="text-white">Помимо качественного подбора мы еще и максимально быстрые! Быстро не значит плохо. Уже через неделю у Вас будут первые кандидаты.</p>
       </div>
       <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
+        <div class="feature-icon bg-info text-dark bg-gradient">
           <svg class="bi" width="1em" height="1em"><use xlink:href="#mortarbo"/></svg>
         </div>
-        <h2 class="text-warning">Опыт</h2>
+        <h2 class="text-info">Опыт</h2>
         <p class="text-white">В нашем портфолио собраны кейсы из разных доменов. Мы вели и ведем поиск сотрудников абсолютно разного уровня сложности, ориентируясь на наши компетенции и профессионализм.</p>
       </div>
       <div class="feature col">
-        <div class="feature-icon bg-warning text-dark bg-gradient">
+        <div class="feature-icon bg-info text-dark bg-gradient">
           <svg class="bi" width="1em" height="1em"><use xlink:href="#signpost"/></svg>
         </div>
-        <h2 class="text-warning">Гибкий подход</h2>
+        <h2 class="text-info">Гибкий подход</h2>
         <p class="text-white">Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и работодателя, а также специфику корпоративной культуры, в которую идет кандидат.</p>
        
       </div>
@@ -935,7 +945,8 @@ a.preicons
             <span class="badge bg-info text-dark">UI/UX дизайнер - 4</span>
             <span class="badge bg-white text-dark">node.js разработчик - 1</span>
             </p>
-       <h2 class="text-info pb-2">Отзывы о нас</h2>
+            <div class="container"><hr></div>
+       <h2 class="text-info pb-2 pt-1">Отзывы о нас</h2>
             <div class="row container pt-2 pb-3 text-center">
             <div class="col-lg-6 col-md-12 container py-2 mx-auto">
                 <div class="card mb-2 border-0 bg-darkss rounded-5">
