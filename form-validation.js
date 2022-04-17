@@ -7,6 +7,9 @@
   document.querySelector('#navbar1').addEventListener('click', function () {
     document.querySelector('.offcanvas-collapse').classList.remove('open')
   })
+  document.querySelector('#navbar2').addEventListener('click', function () {
+    document.querySelector('.offcanvas-collapse').classList.remove('open')
+  })
 })()
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
