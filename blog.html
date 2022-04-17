@@ -760,7 +760,7 @@ a.preicons
           <a class="nav-link text-white active" aria-current="page" href="index.html">Главная</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white" href="#">Услуги</a>
+          <a class="nav-link text-white" href="sevices.html">Услуги</a>
         </li>
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white" id="nav-1" href="price.html">Цены</a>
@@ -778,7 +778,7 @@ a.preicons
           <a class="nav-link text-white" id="nav-5" href="vacancy.html">Вакансии</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white d-none" id="nav-6" href="#">Документы</a>
+          <a class="nav-link text-white d-none" id="nav-6" href="docs.html">Документы</a>
         </li>
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white d-none" id="nav-7" href="#">Оповещения (3)</a>
@@ -791,9 +791,9 @@ a.preicons
             <li class="d-none" id="drop-3"><a class="dropdown-item text-white bg-darkss" href="about.html">О нас</a></li>
             <li class="d-none" id="drop-4"><a class="dropdown-item text-white bg-darkss" href="contacts.html">Контакты</a></li>
             <li class="d-none" id="drop-5"><a class="dropdown-item text-white bg-darkss" href="vacancy.html">Вакансии (8)</a></li>
-            <li class="d-none" id="drop-6"><a class="dropdown-item text-white bg-darkss" href="#">Документы</a></li>
+            <li class="d-none" id="drop-6"><a class="dropdown-item text-white bg-darkss" href="docs.html">Документы</a></li>
             <li class="d-none" id="drop-7"><a class="dropdown-item text-white bg-darkss" href="#">Оповещения (3)</a></li>
-            <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="#">Настройки</a></li>
+            <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="settings.html">Настройки</a></li>
             <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="#">Выход</a></li>
           </ul>
         </li>
@@ -802,7 +802,7 @@ a.preicons
         <input class="form-control d-none d-lg-block me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
         <button class="btn btn-outline-warning d-none d-lg-block" type="submit">Искать</button>
       </form>
-        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block" href="#item3">Оставить заявку</button>
+        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block" href="#" data-bs-toggle="modal" data-bs-target="#getnewOrder">Оставить заявку</button>
         <div class="d-block d-flex justify-content-between d-lg-none pt-3">
     <a class="navbar-brand text-white" href="index.html">Хочу в IT</a>
     <button type="button" class="btn-close btn-close-white p-3" data-bs-dismiss="modal" id="navbar1" aria-label="Close"></button>
@@ -816,10 +816,10 @@ a.preicons
         <button class="btn btn-outline-warning btn-lg" type="submit">Искать</button>
       </form>
                 <ul class="navbar-nav gap-2 pt-2">
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-warning btn-lg text-dark" href="#"><i class="bi bi-plus fa-lg"></i> Оставить заявку</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="#"><i class="bi bi-journal-text fa-lg"></i> Услуги</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="price.html"><i class="bi bi-coin fa-lg"></i> Цены</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="blog html"><i class="bi bi-newspaper fa-lg"></i> Блог</a></li>
+                    <li class="nav-item d-sm-block mb-3"><button class="orderbtn rounded-5 btn mx-auto btn-lg w-100" href="#" data-bs-toggle="modal" data-bs-target="#getnewOrder">Оставить заявку</button></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="sevices.html"><i class="bi bi-journal-text fa-lg"></i> Услуги</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="prices.html"><i class="bi bi-coin fa-lg"></i> Цены</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="blog.html"><i class="bi bi-newspaper fa-lg"></i> Блог</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="about.html"><i class="bi bi-chat-right-quote fa-lg"></i> О нас</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="contacts.html"><i class="bi bi-phone-fill fa-lg"></i> Контакты</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="vacancy.html"><i class="bi bi-phone-fill fa-lg"></i> Вакансии</a></li>
@@ -849,9 +849,9 @@ a.preicons
                                 </div>
                             </div>
                             <a class="btn btn-warning" href="vacancy.html"><i class="bi bi-inboxes-fill fa-lg"></i> Вакансии (8)</a>
-                            <button class="btn btn-warning"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</button>
-                            <button class="btn btn-warning"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</button>
-                            <button class="btn btn-warning"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</button>
+                            <a class="btn btn-warning" href="docs.html"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</a>
+                            <a class="btn btn-warning" href="#"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</a>
+                            <a class="btn btn-warning" href="settings.html"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</a>
                         </div>
                     </div>
                 </div>
@@ -939,57 +939,56 @@ a.preicons
   
   </main>
  <hr>
-     <footer class="site-footer footer fixed-buttom" id="footer">
+    <footer class="site-footer footer fixed-buttom" id="footer">
         <div class="container-fluid">
           <div class="site-footer">
               <div class="wrp">
         <ul class="cols_menu row" style="padding-left: 8px; margin-left: -8px; margin-right: 8px; padding-right: -8px;">
             <li class="col-xs-12 col-md-3 col-sm-6 justify-content-between">
                 <b data-toggle="collapse" role="button" data-target="#fmenu1_1" aria-expanded="false" class="collapsed">
-                    <i></i> <b tkey="">Услуги и цены </b>
+                    <i></i> <b>Услуги и цены </b>
                 </b>
                 <div class="collapse" id="fmenu1_1">
                     <nav>
-                        <a href="services.html" tkey="">Подбор IT специалистов</a>
-                        <a href="services.html" tkey="">Консультации</a>
-                        <a href="services.html" tkey="">Прейскурант и цены</a>
+                        <a href="services.html">Подбор IT специалистов</a>
+                        <a href="services.html">Консультации</a>
+                        <a href="prices.html">Прейскурант и цены</a>
                     </nav>
                 </div>
             </li>
             <li class="col-xs-12 col-md-3 col-sm-6">
                 <b data-toggle="collapse" role="button" data-target="#fmenu1_2" aria-expanded="false" class="collapsed">
-                    <i></i> <b tkey="">Информация</b>
+                    <i></i> <b>Информация</b>
                 </b>
                 <div class="collapse" id="fmenu1_2">
                     <nav>
-                        <a href="docs.html" tkey="">Документы</a>
-                        <a href="blog.html" tkey="">Блог компании</a>
-                        <a href="#" tkey="">FAQ</a>
+                        <a href="docs.html">Документы</a>
+                        <a href="blog.html">Блог компании</a>
                     </nav>
                 </div>
             </li>
             <li class="col-xs-12 col-md-3 col-sm-6">
                 <b data-toggle="collapse" role="button" data-target="#fmenu1_3" aria-expanded="false" class="collapsed">
-                    <i></i> <b tkey="">О нас</b>
+                    <i></i> <b>О нас</b>
                 </b>
                 <div class="collapse" id="fmenu1_3">
                     <nav>
-                        <a href="about.html" tkey="">Кто мы</a>
-                        <a href="about.html" tkey="">О компании</a>
-                        <a href="about.html" tkey="">Проекты</a>
+                        <a href="about.html">Кто мы</a>
+                        <a href="about.html">О компании</a>
+                        <a href="about.html">Проекты</a>
                     </nav>
                 </div>
             </li>
 
             <li class="col-xs-12 col-md-3 col-sm-6">
                 <b data-toggle="collapse" role="button" data-target="#fmenu1_4" aria-expanded="false" class="collapsed">
-                    <i></i> <b tkey="">Обратная связь</b>
+                    <i></i> <b>Обратная связь</b>
                 </b>
                 <div class="collapse" id="fmenu1_4">
                     <nav>
-                        <a href="contacts.html" tkey="">Контакты и реквизиты</a>
-                        <a href="mailto:a.golubenko@outlook.com" tkey="">Написать нам</a>
-                        <a href="#" tkey="">Заказать звонок</a>
+                        <a href="contacts.html">Контакты и реквизиты</a>
+                        <a href="mailto:a.golubenko@outlook.com">Написать нам</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callMeModal">Заказать звонок</a>
                     </nav>
                 </div>
             </li>
@@ -1003,13 +1002,13 @@ a.preicons
         <div class="row d-flex flex-row-reverse">
           <div class="col-md-5 col-xs-12">
             <ul class="social-icons">
-              <li title="Twitter"><a class="twitter" href="twitter.com/want2it"><i class="fa fa-twitter fa-lg"></i></a></li>   
+              <li title="Twitter"><a class="twitter" href="https://twitter.com/want2it"><i class="fa fa-twitter fa-lg"></i></a></li>   
             <!--  <li title="Facebook"><a class="facebook" href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li> -->
-              <li title="Instagram"><a class="instagram insta" href="instagram.com/want2it"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+              <li title="Instagram"><a class="instagram insta" href="https://instagram.com/want2it"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
             <!--  <li title="Vkontakte"><a class="vkontakte" href="#"><i class="fa fa-vk fa-lg" aria-hidden="true"></i></a></li> -->
-              <li title="Telegram"><a class="telegram" href="t.me/want2it"><i class="fa fa-telegram fa-lg"></i></a></li>   
-              <li title="LinkedIn"><a class="linkedin" href="#"><i class="fa fa-linkedin fa-lg"></i></a></li> 
-              <li title="Habr"><a class="habr" href="#"><img src="habr-habr.png" width="30px" height="30px" style="opacity: 0.8"></a></li>   
+              <li title="Telegram"><a class="telegram" href="https://t.me/want2it"><i class="fa fa-telegram fa-lg"></i></a></li>   
+              <li title="LinkedIn"><a class="linkedin" href="https://linkedin.com/"><i class="fa fa-linkedin fa-lg"></i></a></li> 
+              <li title="Habr"><a class="habr" href="https://career.habr.com/"><img src="habr-habr.png" width="30px" height="30px" style="opacity: 0.8"></a></li>   
             </ul>
           </div>
           <div class="col-md-7 col-xs-12">
@@ -1020,8 +1019,86 @@ a.preicons
         </div>
       </div>
 
-</footer> 
+</footer>  
 
+<!-- Modals -->
+      <div class="modal fade" id="callMeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-white bg-darksm rounded-5 border-white">
+      <div class="modal-header" style="border:0">
+        <h5 class="modal-title" id="getnewOrderLabel">Обратный звонок</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
+            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
+            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="time" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
+            <label for="floatingInput3" class="text-warning">Во сколько набрать?</label>
+          </div>      
+      </div>
+      <div class="modal-footer mx-auto" style="border:0">
+        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
+        <button type="submit" class=" orderbtn btn btn-lg">Подтвердить</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <div class="modal fade" id="getnewOrder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="getnewOrderLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-white bg-darksm rounded-5 border-white">
+      <div class="modal-header" style="border:0">
+        <h5 class="modal-title" id="getnewOrderLabel">Оставить заявку</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
+            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput0" placeholder="Компания">
+            <label for="floatingInput0" class="text-warning">Из какой Вы компании?</label>
+          </div>
+              
+        
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
+            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+          </div>
+              
+        
+          <div class="form-floating mb-3">
+            <input type="mail" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email">
+            <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
+          </div>
+              
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
+            <label for="floatingInput3" class="text-warning">Кого Вы ищете?</label>
+          </div>      
+        
+            
+              
+      </div>
+      <div class="modal-footer mx-auto" style="border:0">
+        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
+        <button type="submit" class=" orderbtn btn btn-lg">Подтвердить</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="form-validation.js"></script>
