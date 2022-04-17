@@ -871,71 +871,61 @@ a.preicons
   </div>
   </header>
   <main class="ms-3 pe-4 pt-4">
-    <div class="row g-4 mx-auto py-4" style="width: 96%">
-      <div id="slider">
-          <input type="radio" name="slider" value="slide1" id="s1" checked>
-          <input type="radio" name="slider" value="slide2" id="s2">
-          <input type="radio" name="slider" value="slide3" id="s3">
-          <label for="s1" id="slide1" class=" rounded-5 bg-darkss" style="width:80%; max-width:480px;">
-            <div class="item rounded-5">
-              <h2>Личный менеджер</h2>
-              <p>Ваша персональная поддержка на протяжении всего проекта 24 на 7. Он всегда будет готов ответить на любые Ваши вопросы и держать в курсе о состоянии проекта и разработки.</p>
-            </div>
-          </label>
-          <label for="s2" id="slide2" class=" rounded-5 bg-darkss" style="width:80%; max-width:480px;">
-            <div class="item rounded-5">
-              <h2>Design-команда</h2>
-              <p>Занимаются проектированием и разработкой UI/UX, дизайном мобильных приложений, сайтов и любых интерфейсных решений. Лучше всех знают, где Вашему клиенту будет удобно нажать кнопку.</p>
-            </div>
-          </label>
-          <label for="s3" id="slide3" class=" rounded-5 bg-darkss" style="width:80%; max-width:480px;">
-            <div class="item rounded-5">
-              <h2>Project-менеджер</h2>
-              <p>Руководитель проектной группы. Он ставит задачи разработчикам, следит за соблюдением сроков и контролирует работу над Вашим проектом.</p>
-            </div>
-          </label>
-        </div>
-        <div class="slider-dots">
-          <label for="s1" id="dot1" class="active"></label>
-          <label for="s2" id="dot2"></label>
-          <label for="s3" id="dot3"></label>
-        </div>
+    <div class="row my-auto g-4 mx-auto py-4">
+     <div class="col-lg-4 col-sm-12 g-4 mx-auto py-4"><img src="b-promo.png" class="img-fluid" alt="..."><h1 class="pt-2 text-info text-center">Блог компании</h1></div>
+        <div class="col-lg-4 col-md-5 col-sm-12 g-4 mx-auto py-4" style="width: 94%; max-width: 360px; height: 380px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active card bg-darkss rounded-6 mb-3" style=" height: 320px">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Заголовок карточки</h5>
+    <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+    <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+  </div>
+</div>
+      <div class="carousel-item card  bg-darkss rounded-6 mb-3" style=" height: 320px">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Заголовок карточки1</h5>
+    <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+    <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+  </div>
     </div>
-   <div class="row g-4 mx-auto pt-3">
-      <div class="col-md-7 col-lg-8 mx-auto pb-3 mb-1" id="item2">
-                  <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container">
-      <h1 class="text-info py-4">Наши партнеры</h1>
-	<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 text-center mx-auto my-auto">
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="benefits-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="deriv-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="seedilon-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="vidcrunch-logo.svg" width="100vw" class="w-100"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="yoursoft-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="Premiumsoft-logo.jfif" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto"><img src="alfabank-logo.png" width="100vw" class="w-100"></div>
-       
-        </div>
+      <div class="carousel-item card  bg-darkss rounded-6 mb-3" style=" height: 320px">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Заголовок карточки2</h5>
+    <p class="card-text">Это более широкая карточка с вспомогательным текстом ниже в качестве естественного перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+    <p class="card-text"><small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+  </div>
     </div>
+  </div>
+
+  <button class="carousel-control-next" style="margin-right: -38px" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
       </div>
-      <div class="col-md-5 col-lg-4 mx-auto pb-3 mb-1 order-md-last">
-           <div class="py-2 pt-2 bg-darks rounded-5 my-auto container">
-          <h3 class="text-warning py-4">Архив вакансий:</h3>
-          <ul>
-              <li class="py-1" style="margin-left:-20px;"><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span></a>
+     <div class="col-lg-4 d-md-7 col-sm-12 g-4 mx-auto py-4">
+                   <div class="py-2 pt-2 bg-darks rounded-5 my-auto container">
+          <h3 class="text-warning py-4">Все статьи:</h3>
+          <ul class="fa-ul">
+              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1" style="margin-left:-20px;"><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span></a>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1" style="margin-left:-20px;"><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span></a>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-              <li class="py-1" style="margin-left:-20px;"><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span></a>
+              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
               </li>
-          
+              <li class="py-1 d-flex justify-content-between" style="margin-left:-20px;"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h6" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer </a><span class="text-muted">15/04/22</span>
+              </li>
           </ul>
           </div>
-<div id="item3"></div>
-
+        </div>
       </div>
-    </div>
   
   </main>
  <hr>
