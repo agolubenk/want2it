@@ -22,7 +22,128 @@
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <style>
-
+.main-timeline{ font-family: 'Poppins', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: calc(50% + 200px);
+    margin: 0 0 25px 5px;
+    float: right;
+}
+.main-timeline .timeline-content{
+    color: #555;
+    padding: 15px 15px 15px 290px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-content:before{
+    content: '';
+    background-color: #00A7FB;
+    height: 100%;
+    width: 120px;
+    position: absolute;
+    left: 140px;
+    top: 0;
+}
+.main-timeline .timeline-year{
+    color: #00A7FB;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 43px;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 22px;
+    top: 50%;
+}
+.main-timeline .timeline-icon{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    width: 120px;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 140px;
+    top: 50%;
+}
+.main-timeline .title{
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 0 7px;
+}
+.main-timeline .description{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    margin: 0 5px 25px 0;
+    float: left;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{ padding: 15px 280px 15px 20px; }
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    left: auto;
+    right: 139px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year{
+    left: auto;
+    right: 19px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-icon{
+    left: auto;
+    right: 139px;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before{ background-color: #FF3E7D; }
+.main-timeline .timeline:nth-child(4n+2) .timeline-year{ color: #FF3E7D; }
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before{ background-color: #7338BA; }
+.main-timeline .timeline:nth-child(4n+3) .timeline-year{ color: #7338BA; }
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before{ background-color: #FF9800; }
+.main-timeline .timeline:nth-child(4n+4) .timeline-year{ color: #FF9800; }
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        margin: 0 0 30px;
+    }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(even) .timeline-content{
+        text-align: center;
+        padding: 200px 15px 15px 15px;
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline:nth-child(even) .timeline-content:before{
+        width: 100%;
+        height: 100px;
+        transform: translateX(-50%) translateY(0);
+        left: 50%;
+        right: auto;
+        top: 80px;
+    }
+    .main-timeline .timeline-year,
+    .main-timeline .timeline:nth-child(even) .timeline-year{
+        transform: translateY(0) translateX(-50%);
+        left: 50%;
+        right: auto;
+        top: 20px;
+    }
+    .main-timeline .timeline-icon,
+    .main-timeline .timeline:nth-child(even) .timeline-icon{
+        width: auto;
+        transform: translateY(0) translateX(-50%);
+        left: 50%;
+        right: auto;
+        top: 105px;
+    }
+}
 .opacity-50 { opacity: .5; }
 .opacity-75 { opacity: .75; }
 
@@ -890,7 +1011,7 @@ a.preicons
               <li class="py-1 text-white" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Шаг 5 'Принимаем позу мыслителя и рассуждаем: оффер или фидбек'"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i>Принимаем решение</li>
               <li class="py-1 text-white" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Шаг 6 'Счастливый кандидат бежит подписывать оффер и участвовать в утренних agile разговорах'"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i>Кандидат работает у Вас</li>
           </ul>
-                      <div class="container"><button class="orderbtn w-100 rounded-5 btn mx-3" href="#" data-bs-toggle="modal" data-bs-target="#recruitFull">Подробнее</button></div>
+                      <div class="container"><button class="orderbtn w-100 rounded-5 btn" href="#" data-bs-toggle="modal" data-bs-target="#recruitFull">Подробнее</button></div>
       <h6 class="text-white pb-2 pt-2" style="opacity: 0.7;">Разработчики, архитекторы, аналитики, тестировщики, дизайнеры, лиды и ТОП-менеджмент.</h6>
     </div>
       </div>
@@ -906,7 +1027,7 @@ a.preicons
               <li class="py-1 text-white" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Шаг 5 'Мы кладём Вам на стол конверт с надписью «совершенно секретно» и Вы принимаете решение'"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i>Вы принимаете итоговое решение</li>
               <li class="py-1 text-white" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Шаг 6 'Мы выносим выбранного Вами сотрудника из кабинета и увозим в лес, чтобы Вы могли спать спокойно'"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i>Мы провожаем сотрудника с работы</li>
           </ul>
-                      <div class="container"><button class="orderbtn w-100 rounded-5 btn mx-3" href="#" data-bs-toggle="modal" data-bs-target="#fireFull">Подробнее</button></div>
+                      <div class="container"><button class="orderbtn w-100 rounded-5 btn" href="#" data-bs-toggle="modal" data-bs-target="#fireFull">Подробнее</button></div>
       <h6 class="text-white pb-2 pt-2" style="opacity: 0.7;">Итоговое решение принимаете Вы. Мы только помогаем Вам остаться в хороших отношениях с сотрудником.</h6>
     </div>
       </div>
@@ -922,7 +1043,7 @@ a.preicons
               <li class="py-1 text-white" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Мобилизуем всех безработных и занятых в Вашу компанию"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i>Массовый подбор</li>
               <li class="py-1 text-white" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Завтра кандидаты будут также, как сегодня. И послезавтра тоже"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i>Постоянный подбор</li>
           </ul>
-                      <div class="container"><button class="orderbtn w-100 rounded-5 btn mx-3" href="#" data-bs-toggle="modal" data-bs-target="#allServFull">Подробнее</button></div>
+                      <div class="container"><button class="orderbtn w-100 rounded-5 btn" href="#" data-bs-toggle="modal" data-bs-target="#allServFull">Подробнее</button></div>
       <h6 class="text-white pb-2 pt-2" style="opacity: 0.7;">Мы не ограничиваемся только подбором персонала. У нас достаточно широкий спектр услуг.</h6>
     </div>
       </div>
@@ -1015,7 +1136,7 @@ a.preicons
 
       <!-- Modals -->
       <div class="modal fade" id="fireFull" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="fireFullLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content text-white bg-darksm rounded-5 border-white">
       <div class="modal-header" style="border:0">
         <h5 class="modal-title" id="fireFullLabel">Увольнение сотрудников</h5>
@@ -1045,7 +1166,7 @@ a.preicons
 </div>
       <!-- Modals -->
       <div class="modal fade" id="allServFull" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="allServFullLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content text-white bg-darksm rounded-5 border-white">
       <div class="modal-header" style="border:0">
         <h5 class="modal-title" id="allServFullLabel">Все услуги</h5>
@@ -1053,19 +1174,64 @@ a.preicons
       </div>
       <div class="modal-body">
             
-          Кадровое агентство "Хочу в IT" осуществляет подбор IT персонала любого уровня сложности. Мы работаем с применением различных техник в части поиска и подбора персонала, используем как классические инструменты, так и современные методики для оценки и поиска сотрудников. Ваша команда в наших руках! А мы собираем только профессионалов!
-
-Качество
-Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.
-
-Скорость
-Помимо качественного подбора мы еще и максимально быстрые! Быстро не значит плохо. Уже через неделю у Вас будут первые кандидаты.
-
-Опыт
-В нашем портфолио собраны кейсы из разных доменов. Мы вели и ведем поиск сотрудников абсолютно разного уровня сложности, ориентируясь на наши компетенции и профессионализм.
-
-Гибкий подход
-Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и работодателя, а также специфику корпоративной культуры, в которую идет кандидат.
+       <div class="container my-auto">
+    <div class="row">
+        <div class="col-md-9 container mx-auto">
+            <div class="main-timeline">
+                <div class="timeline bg-darks text-white bordered border-dark border-2">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-year h4">1</div>
+                        <div class="timeline-icon img-circle"><i class="fa fa-id-card-o"></i></div>
+                        <h3 class="title text-white">Составление резюме</h3>
+                        <p class="description text-white">
+                            Помогаем составить покупаемое резюме по опыту, навыкам, знаниям и желаниям. Также подготовим сопроводительные письма.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline bg-darks text-white bordered border-dark border-2">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-year h4">2</div>
+                        <div class="timeline-icon"><i class="fa fa-line-chart"></i></div>
+                        <h3 class="title text-white">Карьерные консультации</h3>
+                        <p class="description text-white">
+                            Найдем Ваши сильные и слабые стороны, подберем максимально подходящую профессию и поможем преодалеть страхи при походе на интервью.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline bg-darks text-white bordered border-dark border-2">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-year h4">3</div>
+                        <div class="timeline-icon"><i class="fa fa-users"></i></div>
+                        <h3 class="title text-white">Обучение рекрутингу</h3>
+                        <p class="description text-white">
+                            Помогаем изучить основы IT-рекрутинга используя практические методы, понять основые принципы и методы при работе в IT-секторе.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline bg-darks text-white bordered border-dark border-2">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-year h4">4</div>
+                        <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                        <h3 class="title text-white">Outstaff</h3>
+                        <p class="description text-white">
+                            Мы можем договориться работать в Вашем коллективе как аутстаф. Мы за развитие партнерских отношений и всегда готовы прийти на встречу.
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline bg-darks text-white bordered border-dark border-2">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-year h4">5</div>
+                        <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                        <h3 class="title text-white">Подбор по тарифам</h3>
+                        <p class="description text-white">
+                            У нас есть 2 тарифных услуги: массовый подбор и постоянный набор. В зависимости от Ваших желаний и выберем оптимальный и начнем работу.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
       </div>
       <div class="modal-footer mx-auto" style="border:0">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
@@ -1076,7 +1242,7 @@ a.preicons
 </div>
       <!-- Modals -->
       <div class="modal fade" id="recruitFull" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="recruitFullLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content text-white bg-darksm rounded-5 border-white">
       <div class="modal-header" style="border:0">
         <h5 class="modal-title" id="recruitFullLabel">Поиск персонала</h5>
