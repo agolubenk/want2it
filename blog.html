@@ -1197,6 +1197,26 @@ Location (города рандомно добавляются в зависим
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="libs/owl-carousel/owl.carousel.min.js"></script>
       <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})();
   var typed = new Typed('.element', {
   // Waits 1000ms after typing "First"
     strings: ['print("Hello World")', 'print("Хочу в IT")', 'print("WANTED!!! IT-специалист")'],
