@@ -870,7 +870,7 @@ a.preicons
               <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
           </div>
           <div class="form-floating mb-3">
-            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон" required>
+            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" pattern="^\+375(?(25|29|33|44)\)?[0-9]{7}$" id="floatingInput1" placeholder="Телефон" required>
             <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
               <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
           </div>
