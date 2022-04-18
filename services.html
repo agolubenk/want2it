@@ -1188,6 +1188,10 @@ a.preicons
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script>
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
   var typed = new Typed('.element', {
   // Waits 1000ms after typing "First"
     strings: ['print("Hello World")', 'print("Хочу в IT")', 'print("WANTED!!! IT-специалист")'],
