@@ -1055,7 +1055,6 @@ a.preicons
     </div>
   </div>
 </div>
-      
       <div class="modal fade" id="getnewOrder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="getnewOrderLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content text-white bg-darksm rounded-5 border-white">
@@ -1064,41 +1063,30 @@ a.preicons
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-            
+                          <form class="needs-validation" novalidate>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя" required>
             <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
           </div>
-        
           <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput0" placeholder="Компания">
-            <label for="floatingInput0" class="text-warning">Из какой Вы компании?</label>
-          </div>
-              
-        
-          <div class="form-floating mb-3">
-            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
+            <input type="tel" id="phone" name="phone" value="+375 (__) ___-__-__" pattern="^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" id="floatingInput1" placeholder="Телефон" required>
             <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
           </div>
-              
-        
           <div class="form-floating mb-3">
-            <input type="mail" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email">
+            <input type="mail" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email" required>
             <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите свой email.</div>
           </div>
-              
-        
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
-            <label for="floatingInput3" class="text-warning">Кого Вы ищете?</label>
-          </div>      
-        
-            
-              
-      </div>
-      <div class="modal-footer mx-auto" style="border:0">
+          <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Укажите, какая именно услуга Вам необходима, стек технологий, домен, ФЛ или ЮЛ являетесь, во сколько с Вами можно связаться и каким способом">
+              <textarea type="text" rows="5" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" style="height: 120px;" placeholder="Стек" required></textarea>
+            <label for="floatingInput3" class="text-warning">Тема заявки</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, расскажите чуть больше.</div>
+          </div>                   
         <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
         <button type="submit" class=" orderbtn btn btn-lg">Подтвердить</button>
+              </form>
       </div>
     </div>
   </div>
@@ -1106,6 +1094,7 @@ a.preicons
 
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="form-validation.js"></script>
+<script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script>
