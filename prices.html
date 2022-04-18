@@ -1162,56 +1162,28 @@ a.preicons
       <div class="modal-header" style="border:0">
         <h5 class="modal-title" id="getnewOrderLabel">Обратный звонок</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      </div>            <form class="needs-validation" novalidate>
       <div class="modal-body">
-            
           <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
-            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" min="3" id="floatingInput10" placeholder="фамилия Имя" required>
+            <label for="floatingInput10" class="text-warning">Как Вас зовут?</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
           </div>
           <div class="form-floating mb-3">
-            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
-            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+            <input type="tel" id="phone" name="phone" value="+375 (__) ___-__-__" pattern="^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" id="floatingInput11" placeholder="+375 (__) ___-__-__" required>
+            <label for="floatingInput11" class="text-warning">Ваш номер телефона</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
           </div>
           <div class="form-floating mb-3">
-            <input type="time" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
-            <label for="floatingInput3" class="text-warning">Во сколько набрать?</label>
+            <input type="time" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput13" placeholder="Стек">
+            <label for="floatingInput13" class="text-warning">Во сколько набрать?</label>
+              <div class="valid-tooltip">Все хорошо!</div>
           </div>      
       </div>
       <div class="modal-footer mx-auto" style="border:0">
         <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
         <button type="submit" class=" orderbtn btn btn-lg">Подтвердить</button>
-      </div>
-    </div>
-  </div>
-</div>
-      
-       <div class="modal fade" id="callMeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-white bg-darksm rounded-5 border-white">
-      <div class="modal-header" style="border:0">
-        <h5 class="modal-title" id="getnewOrderLabel">Обратный звонок</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-            
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя">
-            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="tel" class="form-control bg-darks b text-white order-white rounded-4" id="floatingInput1" placeholder="Телефон">
-            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="time" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" placeholder="Стек">
-            <label for="floatingInput3" class="text-warning">Во сколько набрать?</label>
-          </div>      
-      </div>
-      <div class="modal-footer mx-auto" style="border:0">
-        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
-        <button type="submit" class=" orderbtn btn btn-lg">Подтвердить</button>
-      </div>
+          </div></form>
     </div>
   </div>
 </div>
