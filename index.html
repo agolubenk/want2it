@@ -1,7 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-    <head>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
     <title>Хочу в IT · 2it</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
@@ -489,7 +493,7 @@ a.preicons
 		.cols_menu > li:first-child > b { border-top-width: 0; }
 		.cols_menu > li > b { cursor: pointer; margin: 0; padding: 5px 0; }
 		.cols_menu > li > b i {
-			display: block; float: right; content: "+";;
+			display: block; float: right; width: 14px; height: 4px; position: relative;
 			margin: 9px 0 5px 10px; background-color: var(--footer-b-color)!important;;
 		}
 		.cols_menu > li > b.collapsed i:after, .cols_menu > li > b i { background-color: #ffc107!important; }
@@ -497,6 +501,7 @@ a.preicons
 			content: "";
 			display: block;
 			margin: 0px auto 0 auto;
+			height: 14px; width: 14px;
 		}
 		.cols_menu > li .collapse { display: none; }
 		.cols_menu > li .collapse.in { display: block; }
@@ -628,16 +633,13 @@ a.preicons
 ::-webkit-scrollbar-thumb {
  box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
-        
     </style>
 
     
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
-                            
-    </head>   
-<body>
-
+  </head>
+  <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="bootstrap" viewBox="0 0 118 94">
     <title>Bootstrap</title>
@@ -710,10 +712,7 @@ a.preicons
     <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
 </symbol>
 </svg>
-
-
-
-     <header class="bg-darkss text-white d-flex text-center" id="search-menu" style="height: calc(100vh - 56px); min-height: 510px;">
+ <header class="bg-darkss text-white d-flex text-center" id="search-menu" style="height: calc(100vh - 56px); min-height: 510px;">
     <div class="container py-5 position-relative">
         
     <div class="py-5 text-center">
@@ -994,9 +993,7 @@ a.preicons
     </div>
     </div>
   </main>
-    <br>
-	
-	
+ <hr>
  <footer class="site-footer footer fixed-buttom" id="footer">
         <div class="container-fluid">
           <div class="site-footer">
@@ -1077,10 +1074,6 @@ a.preicons
       </div>
 
 </footer>  
-
-	
-	
-	
 <!-- Modals -->
       <div class="modal fade" id="callMeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -1211,5 +1204,70 @@ for (const button of buttons) {
   button.addEventListener("click", createRipple);
 }
       </script>
-</body>
+     <!-- 
+     <script>
+let nav0 = document.getElementById("nav-0").offsetWidth;
+let nav1 = document.getElementById("nav-1").offsetWidth;
+let nav2 = document.getElementById("nav-2").offsetWidth;
+let nav3 = document.getElementById("nav-3").offsetWidth;
+let nav4 = document.getElementById("nav-4").offsetWidth;
+let nav5 = document.getElementById("nav-5").offsetWidth;
+let nav6 = document.getElementById("nav-6").offsetWidth;
+let nav7 = document.getElementById("nav-7").offsetWidth;
+let all = window.screen.width;
+if(nav0 > 500){
+    let ne = Math.ceil((nav0 - 500)/100);
+    if(ne == 1){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 2){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.removeClass('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 3){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        document.getElementById("nav-5").classList.add('d-none');
+        document.getElementById("nav-5").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 4){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        document.getElementById("nav-5").classList.add('d-none');
+        document.getElementById("nav-5").classList.remove('d-none');
+        document.getElementById("nav-4").classList.add('d-none');
+        document.getElementById("nav-4").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 5){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        document.getElementById("nav-5").classList.add('d-none');
+        document.getElementById("nav-5").classList.remove('d-none');
+        document.getElementById("nav-4").classList.add('d-none');
+        document.getElementById("nav-4").classList.remove('d-none');
+        document.getElementById("nav-3").classList.add('d-none');
+        document.getElementById("nav-3").classList.remove('d-none');
+        alert(ne);
+    }
+alert(ne);
+}
+alert(nav0);
+
+      
+      </script>
+      -->
+  </body>
 </html>
