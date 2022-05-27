@@ -22,6 +22,9 @@
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <style>
+		.claps{
+			display:none;
+		}
         body{
             background: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%); 
             background-attachment: fixed;
@@ -718,7 +721,7 @@ a.preicons
     <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4 figure-img img-fluid large-logo" src="big-logo.png" alt="">
       <h2 class="pt-3 element" style="height: 80px;"> &nbsp;</h2> &nbsp;
-        <button class="orderbtn btn btn-lg rounded-5 d-lg-none" href="#item3">Оставить заявку</button>
+        <button class="orderbtn btn btn-lg rounded-5 d-lg-none claps" href="#item3">Оставить заявку</button>
         <div class=" d-none d-lg-block"><button class="orderbtn btn btn-lg rounded-5" href="#item2">Оставить заявку</button></div>
       <p class="lead pt-3">Кадровое агенство по профессиональному подбору IT специалистов любого грейда и любой сложности. Вы соберем Вашу команду мечты!</p>
     </div>        
@@ -784,7 +787,7 @@ a.preicons
         <input class="form-control d-none d-lg-block me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
         <button class="btn btn-outline-warning d-none d-lg-block" type="submit">Искать</button>
       </form>
-        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block" href="#item2">Оставить заявку</button>
+        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block claps" href="#item2">Оставить заявку</button>
 
         <div class="d-block d-flex justify-content-between d-lg-none pt-3">
     <a class="navbar-brand text-white" href="index.html">Хочу в IT</a>
@@ -1204,6 +1207,31 @@ for (const button of buttons) {
   button.addEventListener("click", createRipple);
 }
       </script>
+	  <script>
+		  var element01 = document.querySelector('#item2');
+		  var element02 = document.querySelector('#item3');
+		  var Visible = function (target) { 
+			  var targetPosition = { 
+				  top: window.pageYOffset + target.getBoundingClientRect().top, 
+				  left: window.pageXOffset + target.getBoundingClientRect().left, 
+				  right: window.pageXOffset + target.getBoundingClientRect().right, 
+				  bottom: window.pageYOffset + target.getBoundingClientRect().bottom 
+			  }, // Получаем позиции окна 
+				  windowPosition = { top: window.pageYOffset, left: window.pageXOffset, right: window.pageXOffset + document.documentElement.clientWidth, bottom: window.pageYOffset + document.documentElement.clientHeight }; 
+			  if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху 
+				  targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу 
+				  targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева 
+				  targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа // Если элемент полностью видно, то запускаем следующий код
+				  console.clear(); 
+				  console.log('Вы видите элемент :)'); 
+			  } else { // Если элемент не видно, то запускаем этот код 
+				  console.clear(); 
+			  }; 
+		  }; // Запускаем функцию при прокрутке страницы 
+		  window.addEventListener('scroll', function() {
+			  Visible (element01); 
+		  }); // А также запустим функцию сразу. А то вдруг, элемент изначально видно Visible (element);
+	  </script>
      <!-- 
      <script>
 let nav0 = document.getElementById("nav-0").offsetWidth;
