@@ -792,6 +792,10 @@ a.preicons
 }
 .scroll-table tbody tr:nth-child(even){
 }
+#instructions {
+  position: fixed;
+  left: 50%;
+}
 
     </style>
 
@@ -997,9 +1001,22 @@ a.preicons
       <hr><h1 class="text-info pb-2">Услуги компании</h1>
     </div>
       </div>
- 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="3" refY="5"
+        markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+  <g fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)">
+    <path id="arrowLeft"/>
+    <path id="arrowRight"/>
+  </g>
+</svg>
    <div class="row g-4 mx-auto py-3">
-      <div class="col-md-6 col-lg-4 col-sm-12 mx-auto">
+      <div class="col-md-6 col-lg-4 col-sm-12 mx-auto" id="a">
                   <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container">
       <h4 class="text-warning pt-4">Подбор персонала</h4>
       <h6 class="text-dark pb-1">Индивидуальный подбор под Ваши задачи и проекты</h6><hr>
@@ -1015,7 +1032,7 @@ a.preicons
       <h6 class="text-white pb-2 pt-2" style="opacity: 0.7;">Разработчики, архитекторы, аналитики, тестировщики, дизайнеры, лиды и ТОП-менеджмент.</h6>
     </div>
       </div>
-      <div class="col-md-6 col-lg-4 col-sm-12 mx-auto">
+      <div class="col-md-6 col-lg-4 col-sm-12 mx-auto" id="b">
                   <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container">
       <h4 class="text-warning pt-4">Увольнение сотрудников</h4>
       <h6 class="text-dark pb-1">Индивидуальный подход к каждому члену команды</h6><hr>
@@ -1436,70 +1453,54 @@ for (const button of buttons) {
   button.addEventListener("click", createRipple);
 }
       </script>
-     <!-- 
      <script>
-let nav0 = document.getElementById("nav-0").offsetWidth;
-let nav1 = document.getElementById("nav-1").offsetWidth;
-let nav2 = document.getElementById("nav-2").offsetWidth;
-let nav3 = document.getElementById("nav-3").offsetWidth;
-let nav4 = document.getElementById("nav-4").offsetWidth;
-let nav5 = document.getElementById("nav-5").offsetWidth;
-let nav6 = document.getElementById("nav-6").offsetWidth;
-let nav7 = document.getElementById("nav-7").offsetWidth;
-let all = window.screen.width;
-if(nav0 > 500){
-    let ne = Math.ceil((nav0 - 500)/100);
-    if(ne == 1){
-        document.getElementById("nav-7").classList.add('d-none');
-        document.getElementById("nav-7").classList.remove('d-none');
-        alert(ne);
-    }
-    if(ne == 2){
-        document.getElementById("nav-7").classList.add('d-none');
-        document.getElementById("nav-7").classList.removeClass('d-none');
-        document.getElementById("nav-6").classList.add('d-none');
-        document.getElementById("nav-6").classList.remove('d-none');
-        alert(ne);
-    }
-    if(ne == 3){
-        document.getElementById("nav-7").classList.add('d-none');
-        document.getElementById("nav-7").classList.remove('d-none');
-        document.getElementById("nav-6").classList.add('d-none');
-        document.getElementById("nav-6").classList.remove('d-none');
-        document.getElementById("nav-5").classList.add('d-none');
-        document.getElementById("nav-5").classList.remove('d-none');
-        alert(ne);
-    }
-    if(ne == 4){
-        document.getElementById("nav-7").classList.add('d-none');
-        document.getElementById("nav-7").classList.remove('d-none');
-        document.getElementById("nav-6").classList.add('d-none');
-        document.getElementById("nav-6").classList.remove('d-none');
-        document.getElementById("nav-5").classList.add('d-none');
-        document.getElementById("nav-5").classList.remove('d-none');
-        document.getElementById("nav-4").classList.add('d-none');
-        document.getElementById("nav-4").classList.remove('d-none');
-        alert(ne);
-    }
-    if(ne == 5){
-        document.getElementById("nav-7").classList.add('d-none');
-        document.getElementById("nav-7").classList.remove('d-none');
-        document.getElementById("nav-6").classList.add('d-none');
-        document.getElementById("nav-6").classList.remove('d-none');
-        document.getElementById("nav-5").classList.add('d-none');
-        document.getElementById("nav-5").classList.remove('d-none');
-        document.getElementById("nav-4").classList.add('d-none');
-        document.getElementById("nav-4").classList.remove('d-none');
-        document.getElementById("nav-3").classList.add('d-none');
-        document.getElementById("nav-3").classList.remove('d-none');
-        alert(ne);
-    }
-alert(ne);
-}
-alert(nav0);
+var divA       = document.querySelector("#a");
+var divB       = document.querySelector("#b");
+var arrowLeft  = document.querySelector("#arrowLeft");
+var arrowRight = document.querySelector("#arrowRight");
 
-      
+var drawConnector = function() {
+  var posnALeft = {
+    x: divA.offsetLeft - 8,
+    y: divA.offsetTop  + divA.offsetHeight / 2
+  };
+  var posnARight = {
+    x: divA.offsetLeft + divA.offsetWidth + 8,
+    y: divA.offsetTop  + divA.offsetHeight / 2    
+  };
+  var posnBLeft = {
+    x: divB.offsetLeft - 8,
+    y: divB.offsetTop  + divA.offsetHeight / 2
+  };
+  var posnBRight = {
+    x: divB.offsetLeft + divB.offsetWidth + 8,
+    y: divB.offsetTop  + divA.offsetHeight / 2
+  };
+  var dStrLeft =
+      "M" +
+      (posnALeft.x      ) + "," + (posnALeft.y) + " " +
+      "C" +
+      (posnALeft.x - 100) + "," + (posnALeft.y) + " " +
+      (posnBLeft.x - 100) + "," + (posnBLeft.y) + " " +
+      (posnBLeft.x      ) + "," + (posnBLeft.y);
+  arrowLeft.setAttribute("d", dStrLeft);
+  var dStrRight =
+      "M" +
+      (posnBRight.x      ) + "," + (posnBRight.y) + " " +
+      "C" +
+      (posnBRight.x + 100) + "," + (posnBRight.y) + " " +
+      (posnARight.x + 100) + "," + (posnARight.y) + " " +
+      (posnARight.x      ) + "," + (posnARight.y);
+  arrowRight.setAttribute("d", dStrRight);
+};
+
+$("#a, #b").draggable({
+  drag: function(event, ui) {
+    drawConnector();
+  }
+});
+
+setTimeout(drawConnector, 250);
       </script>
-      -->
   </body>
 </html>
