@@ -1,0 +1,1273 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Хочу в IT · 2it</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script src="app.js"></script>
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <style>
+        body{
+            background: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%); 
+            background-attachment: fixed;
+        }
+@media (max-width: 991.98px) {
+        .back{
+            background: linear-gradient(155deg, #DEB887 8.33%, #808080 38.33%, #2F4F4F 63.33%);
+            background-attachment fixed;
+            z-index: 100;
+            opacity: 0.8;
+        }
+        .backs{
+            opacity: 1;
+            background-image: #272727;
+    }
+        } 
+.bg-darksm {
+    --bs-bg-opacity: 0.95;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .75rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+.icon-link > .bi {
+  margin-top: .125rem;
+  margin-left: .125rem;
+  transition: transform .25s ease-in-out;
+  fill: currentColor;
+}
+.icon-link:hover > .bi {
+  transform: translate(.25rem);
+}
+
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: .75rem;
+}
+@media (min-width: 991.98px) {
+        .large-logo{
+            width: 46vh;
+    }
+        }
+@media (min-width: 761.98px) {
+        .large-logo{
+            width: 52vh;
+    }
+        }
+@media (max-width: 761.97px) {
+        .large-logo{
+            width: 25vw;
+    }
+        }
+@media (max-width: 700.97px) {
+        .large-logo{
+            width: 50vw;
+    }
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+        .bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.rounded-4 { border-radius: .5rem; }
+.rounded-5 { border-radius: .75rem; }
+.rounded-6 { border-radius: 1rem; }
+
+.modal-sheet .modal-dialog {
+  width: 380px;
+  transition: bottom .75s ease-in-out;
+  background-image: background: rgba(0, 170, 238, 0.9);
+}
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}
+
+.modal-alert .modal-dialog {
+  width: 380px;
+  background-image: background: rgba(0, 170, 238, 0.9);
+}
+
+.border-right { border-right: 1px solid #eee; }
+
+.modal-tour .modal-dialog {
+  width: 380px;
+  background-image: background: rgba(0, 170, 238, 0.9);
+}
+
+.modal-content {
+  background: background: rgba(0, 170, 238, 0.9);
+}
+.bg-darks {
+    --bs-bg-opacity: 0.2;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+.bg-darkss {
+    --bs-bg-opacity: 0.6;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+        .puls {
+  -webkit-border-radius: 15px;
+  border-radius: 64px;
+  padding: 4px 9px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: transparent;
+    box-shadow: 0 0 2px transparent;
+  }
+
+  50% {
+    --bs-bg-opacity: 0.5;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+    box-shadow: 0 0 9px #272727;
+  }
+
+  100% {
+    --bs-bg-opacity: 0.9;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+  }
+}
+
+.puls {
+  animation: glowing 1500ms infinite;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.orderbtn {
+  position: relative;
+  overflow: hidden;
+  transition: background 400ms;
+  color: #fff;
+  background-color: #6200ee;
+  font-family: 'Roboto', sans-serif;
+  outline: 0;
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+  cursor: pointer;
+}
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.orderbtn1 {
+  position: relative;
+  overflow: hidden;
+  transition: background 400ms;
+  color: #fff;
+  background-color: #6200ee;
+  font-family: 'Roboto', sans-serif;
+  outline: 0;
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+  cursor: pointer;
+}
+
+span.ripple1 {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple1 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple1 {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.copyright-text
+{
+  margin:0
+}
+.social-icons{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.instagram:hover
+{
+  background-color:linear-gradient(135deg, orange, darkmagenta)
+}
+.social-icons a.telegram:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.twitter:hover
+{
+  background-color:#1d9bf0;
+}
+.social-icons a.habr:hover
+{
+  background-color:#6274bc
+}
+@media (max-width:767px){
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+@media (max-width:867px){
+    .left-menu {
+        width: 64px;
+    }
+    .workspace {
+        width: calc(100vw - 65px);
+}
+    }
+    .left-menu {
+        width: 240px;
+    }
+    .workspace {
+        width: calc(100vw - 240px);
+}
+    
+.bigSize1 {
+  font-size:12em;
+}
+.bigSize2 {
+  padding-top:1em;
+}
+
+.site-footer {
+  padding-right:10px;
+  padding-left:10px;
+  padding-top:10px;
+  font-size:15px;
+  line-height:24px;
+}
+.site-footer hr{
+  border-top-color:#26272b;
+  opacity:0.5
+}
+.site-footer hr.small{
+  margin:10px 0
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .preicon
+{
+  text-align:right;
+  color: #ffc107;
+}
+a.preicons
+{
+  text-align:right;
+  color: var(--mdb-success);
+}
+@media (max-width:767px){
+.site-footer .preicon
+{
+  text-align:center;
+  color: #ffc107;
+}
+a.preicons
+{
+  text-align:center;
+  color: var(--mdb-success);
+}
+}
+.navbar-descrypt {
+  color: var(--footer-b-color);
+}
+.navbar-descrypt:hover {
+  color: var(--footer-b-color);
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color: inherit;
+}
+
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:5px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:5px
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #ffffff;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.cols_menu { list-style: none; padding: 0; margin-bottom: 0; width: 100%; }
+	.cols_menu > li > b { cursor: default; display: block; margin-bottom: .6em; text-transform: uppercase; color: #ffc107!important;}
+	.cols_menu > li > b > i { display: none; }
+	.cols_menu > li nav > a {
+		color: #a4a6a8; display: block; padding: .2em 0; text-decoration: none !important;
+		-webkit-transition: padding-left ease .2s; transition: padding-left ease .2s;
+	}
+	.cols_menu > li nav > a:before {
+		content: ""; float: left; margin: 9px 12px 0 -10px; width: 0; height: 2px; background-color: var(--footer-text-color)!important;; opacity: 0;
+		-webkit-transition: all ease .2s; transition: all ease .2s;
+	}
+	.cols_menu > li nav > a:hover { padding-left: 16px; var(--footer-text-color)!important;; }
+	.cols_menu > li nav > a:hover:before { width: 12px; opacity: 1; margin-left: -23px; }
+	.cols_menu > li nav > a > i { margin: 0 .4em 0 0; }
+
+	@media only screen and (min-width: 768px) {
+		.cols_menu > li { margin-bottom: 0px; }
+		.cols_menu > li > div { display: block !important; height: auto !important; width: auto !important; }
+	}
+	@media only screen and (max-width: 767px) {
+		.cols_menu, .rating_scrolling { margin-bottom: 0px; }
+		.cols_menu > li { float: none; width: 100%; }
+		.cols_menu > li:first-child > b { border-top-width: 0; }
+		.cols_menu > li > b { cursor: pointer; margin: 0; padding: 5px 0; }
+		.cols_menu > li > b i {
+			display: block; float: right; width: 14px; height: 4px; position: relative;
+			margin: 9px 0 5px 10px; background-color: var(--footer-b-color)!important;;
+		}
+		.cols_menu > li > b.collapsed i:after, .cols_menu > li > b i { background-color: #ffc107!important; }
+		.cols_menu > li > b.collapsed i:after {
+			content: "";
+			display: block;
+			margin: 0px auto 0 auto;
+			height: 14px; width: 14px;
+		}
+		.cols_menu > li .collapse { display: none; }
+		.cols_menu > li .collapse.in { display: block; }
+		.cols_menu > li nav { padding: 10px 0; padding-top: 0; }
+		.cols_menu > li nav > a:before { display: none; }
+		.cols_menu > li nav > a { padding-left: 0 !important; }
+	}
+
+/* --- Футер --- */
+.footer { width: 100%; padding-top: 0px; padding-bottom: 10px; position: relative; z-index: 1; }
+	.footer .wrp { overflow: hidden; }
+	.footer a { color: inherit; }
+
+	.copyright { display: inline; margin-right: 3%; }
+
+
+
+
+.socialicons{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.socialicons li{
+  display:inline-block;
+  margin-bottom:4px
+}
+.socialicons li.title{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.socialicons a{
+  color:#818a91;
+  font-size:21px;
+  display:inline-block;
+  line-height:50px;
+  width:50px;
+  height:50px;
+  text-align:center;
+  margin-right:12px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.socialicons a:active,.socialicons a:focus,.socialicons a:hover{
+  color:#fff;
+  background-color:#29aafe
+}
+.socialicons.size-sm a{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.socialicons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.socialicons a.instagram:hover
+{
+  background-color:linear-gradient(135deg, orange, darkmagenta)
+}
+.socialicons a.telegram:hover
+{
+  background-color:#007bb6
+}
+.socialicons a.twitter:hover
+{
+  background-color:#1d9bf0;
+}
+.socialicons a.vkontakte:hover
+{
+  background-color:#5181b8
+}
+@media (max-width:767px){
+  .socialicons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+    @media (max-width: 991.98px) {
+.scroll-table-body {
+    height: 330px;
+	overflow-x:auto;
+	margin-top: 0px;
+}
+}
+    @media (min-width: 991.99px) {
+.scroll-table-body {
+	height: 440px;
+	overflow-x:auto;
+	margin-top: 0px;
+}
+}
+.scroll-table table {
+	width:100%;
+	table-layout: fixed;
+	border: none;
+}
+.scroll-table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+}
+.scroll-table tbody td {
+	text-align: left;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+}
+.scroll-table tbody tr:nth-child(even){
+}
+
+/* Стили для скролла */
+::-webkit-scrollbar {
+ width: 6px;
+} 
+::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+ box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  </symbol>
+  <symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+  <symbol id="speedometer2" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+  </symbol>
+  <symbol id="table" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+  </symbol>
+  <symbol id="people-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+  </symbol>
+  <symbol id="grid" viewBox="0 0 16 16">
+    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+  </symbol>
+  <symbol id="collection" viewBox="0 0 16 16">
+    <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+  </symbol>
+  <symbol id="calendar3" viewBox="0 0 16 16">
+    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+  </symbol>
+  <symbol id="chat-quote-fill" viewBox="0 0 16 16">
+    <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+  </symbol>
+  <symbol id="cpu-fill" viewBox="0 0 16 16">
+    <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+    <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
+  </symbol>
+  <symbol id="gear-fill" viewBox="0 0 16 16">
+    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+  </symbol>
+  <symbol id="speedometer" viewBox="0 0 16 16">
+    <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+    <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+  </symbol>
+  <symbol id="toggles2" viewBox="0 0 16 16">
+    <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
+    <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
+    <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+  </symbol>
+  <symbol id="tools" viewBox="0 0 16 16">
+    <path d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+  </symbol>
+  <symbol id="geo-fill" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+  </symbol>
+  <symbol id="signpost" viewBox="0 0 16 16">
+    <path d="M7.293.707A1 1 0 0 0 7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586A1 1 0 0 0 7.293.707z"/>
+</symbol>
+  <symbol id="spedomi" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+  <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+</symbol>
+  <symbol id="mortarbo" viewBox="0 0 16 16">
+   <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</symbol>
+  <symbol id="checkkk" viewBox="0 0 16 16">
+    <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+</symbol>
+</svg>
+ <header class="bg-darkss text-white d-flex text-center" id="search-menu" style="height: calc(100vh - 56px); min-height: 510px;">
+    <div class="container py-5 position-relative">
+        
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4 figure-img img-fluid large-logo" src="big-logo.png" alt="">
+      <h2 class="pt-3 element" style="height: 80px;"> &nbsp;</h2> &nbsp;
+        <button class="orderbtn btn btn-lg rounded-5 d-lg-none" href="#item3">Оставить заявку</button>
+        <div class=" d-none d-lg-block"><button class="orderbtn btn btn-lg rounded-5" href="#item2">Оставить заявку</button></div>
+      <p class="lead pt-3">Кадровое агенство по профессиональному подбору IT специалистов любого грейда и любой сложности. Вы соберем Вашу команду мечты!</p>
+    </div>        
+    <div class="position-absolute bottom-0 start-50" style="margin-left: -16px;">
+      <a href="#item1" class="py-3 h4 bi bi-arrow-down puls text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Start!"></a>
+    </div>
+
+    </div>
+
+  </header>
+ <header class="navbar navbar-expand-lg sticky-top text-white bg-darkss menu item" id="item1">
+<div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">Хочу в IT</a>
+    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+      <i class="bi bi-menu-button-fill text-white"></i>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse back backs" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-0">
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white active" aria-current="page" href="index.html">Главная</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" href="services.html">Услуги</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" id="nav-1" href="prices.html">Цены</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" id="nav-2" href="blog.html">Блог</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" id="nav-3" href="about.html">О нас</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" id="nav-4" href="contacts.html">Контакты</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white" id="nav-5" href="vacancy.html">Вакансии</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white d-none" id="nav-6" href="docs.html">Документы</a>
+        </li>
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link text-white d-none" id="nav-7" href="#">Оповещения (3)</a>
+        </li>
+        <li class="nav-item d-none d-lg-block dropup lg-menu" id="nav-8">
+          <a class="nav-link text-white dropdown-toggle d-none" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">...</a>
+          <ul class="dropdown-menu bg-darkss" aria-labelledby="dropdown01">
+            <li class="d-none" id="drop-1"><a class="dropdown-item text-white bg-darkss" href="prices.html">Цены</a></li>
+            <li class="d-none" id="drop-2"><a class="dropdown-item text-white bg-darkss" href="blog.html">Блог</a></li>
+            <li class="d-none" id="drop-3"><a class="dropdown-item text-white bg-darkss" href="about.html">О нас</a></li>
+            <li class="d-none" id="drop-4"><a class="dropdown-item text-white bg-darkss" href="contacts.html">Контакты</a></li>
+            <li class="d-none" id="drop-5"><a class="dropdown-item text-white bg-darkss" href="vacancy.html">Вакансии (8)</a></li>
+            <li class="d-none" id="drop-6"><a class="dropdown-item text-white bg-darkss" href="docs.html">Документы</a></li>
+            <li class="d-none" id="drop-7"><a class="dropdown-item text-white bg-darkss" href="#">Оповещения (3)</a></li>
+            <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="settings.html">Настройки</a></li>
+            <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="#">Выход</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex d-none">
+        <input class="form-control d-none d-lg-block me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
+        <button class="btn btn-outline-warning d-none d-lg-block" type="submit">Искать</button>
+      </form>
+        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block" href="#item2">Оставить заявку</button>
+
+        <div class="d-block d-flex justify-content-between d-lg-none pt-3">
+    <a class="navbar-brand text-white" href="index.html">Хочу в IT</a>
+    <button type="button" class="btn-close btn-close-white p-3" data-bs-dismiss="modal" id="navbar1" aria-label="Close"></button>
+            </div>
+        <div class="d-sm-block d-lg-none d-grid gap-3">
+        <div class="py-2">
+                    <div class="collapse show" id="collapseProfile">
+
+      <form class="d-flex py-2 d-none">
+        <input class="form-control form-control-lg me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
+        <button class="btn btn-outline-warning d-none d-lg-block btn-lg" type="submit">Искать</button>
+      </form>
+                <ul class="navbar-nav gap-2 pt-2">
+                    <li class="nav-item d-sm-block mb-3"><a class="nav-link btn btn-lg orderbtn rounded-5" href="#item3" data-bs-dismiss="modal" id="navbar2"> Оставить заявку</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="services.html"> Услуги</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="prices.html"> Цены</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="blog.html"> Блог</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="about.html"> О нас</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="contacts.html"> Контакты</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="vacancy.html"> Вакансии</a></li>
+                </ul>
+                     </div>
+                </div>
+        <div class="py-2 pt-0">
+                    <div class="collapse" id="collapseProfile">
+                        <div class="card-body d-grid gap-2" style="background-color: transparent">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                            <h3 class="text-warning" style="opacity: 0.8"><i class="bi bi-person-circle"></i>&nbsp;Голубенко Андрей</h3>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                            <h4 class="text-warning" style="opacity: 0.8"><i class="bi bi-building"></i>&nbsp;М21 Хант</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                            <p class="text-warning" style="opacity: 0.7"><i class="bi bi-telephone-fill"></i>&nbsp;+375255553322<br>
+                                    <i class="bi bi-envelope"></i>&nbsp;pochtovi_golub@hotmail.com
+                                    </p>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                            <span class="h4 text-warning" style="opacity: 0.8">Вакансии:</span>
+                                    <span class="badge bg-primary">в работе: 2</span>&nbsp;<span class="badge bg-danger">ожидают оплаты: 1</span>&nbsp;<span class="badge bg-success">закрыты: 5</span>
+                                </div>
+                            </div>
+                            <a class="btn btn-warning" href="vacancy.html"><i class="bi bi-inboxes-fill fa-lg"></i> Вакансии (8)</a>
+                            <button class="btn btn-warning"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</button>
+                            <button class="btn btn-warning"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</button>
+                            <button class="btn btn-warning"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</button>
+                        </div>
+                    </div>
+                </div>
+        <div class="d-grid gap-2 py-2 fixed-bottom text-end card-body">
+                    <a id="menu-clicker" class="btn btn-warning text-dark btn-lg d-none" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseProfile"><i class="bi bi-emoji-sunglasses-fill fa-lg"></i> Профиль</a>
+             <!--       <button class="btn btn-lg btn-warning"><i class="bi bi-person-workspace fa-lg"></i> Sign-up</button>
+                    <button class="btn btn-outline-warning btn-lg"><i class="bi bi-door-open-fill fa-lg"></i> Sign-in</button> -->
+                    <button class="btn btn-outline-warning btn-lg d-none"><i class="bi bi-box-arrow-right fa-lg"></i> Выход</button>
+                </div>
+            </div>
+    </div>
+  </div>
+  </header>
+  <main class="ms-3 pe-4 pt-4">
+    <div class="row g-4 mx-auto">
+      <div class="col-md-10 col-lg-8 col-sm-12 mx-auto pt-1">
+    <div class="py-3 my-2 text-center bg-darks rounded-5 my-auto container" style="height: 490px">
+      <img class="d-block img-fluid mx-auto mt-5 mb-4" src="big-logo.png" alt="" style="max-width: 240px;">
+      <h2 class="text-warning">Кадровое агентство "Хочу в IT"</h2>
+        <p class="lead h6 text-white">осуществляет подбор IT персонала любого уровня сложности.</p><hr><span class="d-md-block d-none" style="color: azure;">Мы работаем с применением различных техник в части поиска и подбора персонала, используем как классические инструменты, так и современные методики для оценки и поиска сотрудников.</span><span class="text-info">Ваша команда в наших руках!</span>
+    </div>
+<div id="item3"></div>
+      </div>
+      <div class="col-md-7 col-lg-4 col-sm-12 mx-auto pt-3 pb-3 mb-1" id="item2">
+          <div class="p-3 pb-4 rounded-5 bg-darks" style="margin-right: -10px; margin-top: -10px; margin-bottom: 10px; margin-left: 0px;">
+        <h4 class="mb-3">
+          <span class="text-warning">Оформить заявку</span>
+        </h4>
+        <form class="needs-validation" novalidate>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя" min="3" required>
+            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="tel" id="phone" name="phone" value="+375 (__) ___-__-__" pattern="^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" id="floatingInput1" placeholder="+375 (__) ___-__-__" required>
+            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email" required>
+            <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите свой email.</div>
+          </div>
+          <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Укажите, какая именно услуга Вам необходима, стек технологий, домен, ФЛ или ЮЛ являетесь, во сколько с Вами можно связаться и каким способом">
+              <textarea type="text" rows="5" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" style="height: 120px;" placeholder="Стек" required min="20"></textarea>
+            <label for="floatingInput3" class="text-warning">Тема заявки</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, расскажите чуть больше.</div>
+          </div>      
+        
+            <button type="submit" class="w-100 orderbtn btn btn-lg">Подтвердить</button>
+              </form>
+              </div>
+      </div>
+    </div>
+    <div class="row g-5">
+      <div class="mx-2 mx-auto">
+<div class="container-fluid ms-1 row p-4 bg-darks rounded-5 mx-auto">
+<div class="col-lg-11 col-sm-12 mx-auto">
+
+    <div class="container px-2" id="featured-3">
+    
+    <div class="row g-1 pt-4 row-cols-1 row-cols-lg-4 row-cols-md-2">
+      <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="Мы определяем, кто Вам нужен, после чего приступаем к поискам">
+        <div class="feature-icon bg-warning text-dark bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#checkkk"/></svg>
+        </div>
+        <h2 class="text-warning">Качество</h2>
+        <p class="text-white">Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи. Наши кандидаты максимально соответствуют стеку.</p>
+      </div>
+      <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="В течение 1-2 месяцев мы закрываем пул Ваших вакансий">
+        <div class="feature-icon bg-warning text-dark bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#spedomi"/></svg>
+        </div>
+        <h2 class="text-warning">Скорость</h2>
+        <p class="text-white">Помимо качественного подбора мы еще и максимально быстрые! Быстро не значит плохо. Уже через неделю у Вас будут первые кандидаты. Вам остается только выбрать.</p>
+      </div>
+      <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="У нас достаточно опыта, чтобы поразить Вас профессионализмом">
+        <div class="feature-icon bg-warning text-dark bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#mortarbo"/></svg>
+        </div>
+        <h2 class="text-warning">Опыт</h2>
+        <p class="text-white">В нашем портфолио собраны кейсы из разных доменов. Мы вели и ведем поиск сотрудников абсолютно разного уровня сложности, ориентируясь на наши компетенции и профессионализм.</p>
+      </div>
+      <div class="feature col" data-bs-toggle="tooltip" data-bs-placement="top" title="У нас объективный и индивидуальный подход к каждому кандидату и клиенту">
+        <div class="feature-icon bg-warning text-dark bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#signpost"/></svg>
+        </div>
+        <h2 class="text-warning">Гибкий подход</h2>
+        <p class="text-white">Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и работодателя, а также специфику корпоративной культуры, в которую идет кандидат.</p>
+       
+      </div>
+    </div>
+  </div>
+    <hr>
+    
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-5 mt-2 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Подбор IT-специалистов</h4>
+          </div>
+          <div class="card-body" style="height: 264px;">
+            <h1 class="card-title pricing-card-title">от 800 <small class="text-muted fw-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="По курсу Нацбанка на день подписания акта">USD</small></h1>
+<i data-bs-toggle="tooltip" data-bs-placement="bottom" title="Оплата в течение 5 банковских дней со дня трудоустройства кандидата">после трудоустройства</i>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Мы за честный бизнес! Если ищем мы, то все остальные отстраняются от поиска">Ищем только мы</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Гарантия замены кандидата сроком на 1 месяц, если предыдущий не подошел">Одна гарантийная замена</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Мы не отправляем Вам 10 непонятных кандидатов, а показываем 2-3 подходящих">Релевантные кандидаты</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Fullstack поддержка и пояснения на каждом этапе взаимодействия">Полное сопровождение</li>
+            </ul>
+            <button type="button" class="mt-3 w-100 orderbtn btn btn-lg btn-primary">Начать поиск</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-5 mt-2 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Offboarding и увольнение</h4>
+          </div>
+          <div class="card-body" style="height: 264px;">
+            <h1 class="card-title pricing-card-title">от 30 <small class="text-muted fw-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="По курсу Нацбанка на день подписания акта">USD</small></h1>
+<i data-bs-toggle="tooltip" data-bs-placement="bottom" title="Из расчета $100 за 1 уволенного из штата в 5 человек">за интервью</i>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Мы объективно оцениваем продуктивность и микроклимат в коллективе">Независимая оценка</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Затем с каждым сотрудником проводим полноценное собеседование">Полноценное интервью</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Мы оцениваем потенциальные и реальные риски компании на основании собранных данных">Анализ рисков</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Весь удар от уволенного сотрудника мы примем на себя. Вам остается только попрощаться">Увольнение без боли</li>
+            </ul>
+            <button type="button" class="mt-3 w-100 btn orderbtn btn-lg btn-primary">Узнать подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3 mt-2 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Дополнительные услуги</h4>
+          </div>
+          <div class="card-body" style="height: 264px;">
+            <h1 class="card-title pricing-card-title">от 20 <small class="text-muted fw-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="По курсу Нацбанка на день подписания акта">USD</small></h1>
+<i data-bs-toggle="tooltip" data-bs-placement="bottom" title="Каждая услуга рассматривается отдельно">за выполненную услугу</i>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Напишем запоминающееся резюме для Вас + сопроводительное письмо">Составление резюме</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Помощь в поиске развитых компетенций и смене работы">Карьерные консультации</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Обучаем основам рекрутинга и автоматизации отбора кандидатов">Online обучение</li>
+              <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Можем работать у Вас в штате">Аутстаф партнерство</li>
+            </ul>
+            <button type="button" class="mt-3 w-100 orderbtn btn btn-lg btn-primary">Связаться</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+      </div>
+    </div>
+    </div>
+  </main>
+ <hr>
+ <footer class="site-footer footer fixed-buttom" id="footer">
+        <div class="container-fluid">
+          <div class="site-footer">
+              <div class="wrp">
+        <ul class="cols_menu row" style="padding-left: 8px; margin-left: -8px; margin-right: 8px; padding-right: -8px;">
+            <li class="col-xs-12 col-md-3 col-sm-6 justify-content-between">
+                <b data-toggle="collapse" role="button" data-target="#fmenu1_1" aria-expanded="false" class="collapsed">
+                    <i></i> <b>Услуги и цены </b>
+                </b>
+                <div class="collapse" id="fmenu1_1">
+                    <nav>
+                        <a href="services.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Как мы ищем Вам сотрудников">Подбор IT специалистов</a>
+                        <a href="services.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Услуги для физических лиц">Услуги для кандидатов</a>
+                        <a href="prices.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Примерные цены на наши услуги">Прейскурант и цены</a>
+                    </nav>
+                </div>
+            </li>
+            <li class="col-xs-12 col-md-3 col-sm-6">
+                <b data-toggle="collapse" role="button" data-target="#fmenu1_2" aria-expanded="false" class="collapsed">
+                    <i></i> <b>Информация</b>
+                </b>
+                <div class="collapse" id="fmenu1_2">
+                    <nav>
+                        <a href="docs.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Примеры и формы документов">Документы</a>
+                        <a href="blog.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Блог компании">Блог компании</a>
+                    </nav>
+                </div>
+            </li>
+            <li class="col-xs-12 col-md-3 col-sm-6">
+                <b data-toggle="collapse" role="button" data-target="#fmenu1_3" aria-expanded="false" class="collapsed">
+                    <i></i> <b>О нас</b>
+                </b>
+                <div class="collapse" id="fmenu1_3">
+                    <nav>
+                        <a href="about.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Наши достижения">Кто мы</a>
+                        <a href="about.html" data-bs-toggle="tooltip" data-bs-placement="top" title="О компании">О компании</a>
+                    </nav>
+                </div>
+            </li>
+
+            <li class="col-xs-12 col-md-3 col-sm-6">
+                <b data-toggle="collapse" role="button" data-target="#fmenu1_4" aria-expanded="false" class="collapsed">
+                    <i></i> <b>Обратная связь</b>
+                </b>
+                <div class="collapse" id="fmenu1_4">
+                    <nav>
+                        <a href="contacts.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Страница контактов">Контакты и реквизиты</a>
+                        <a href="mailto:a.golubenko@outlook.com" data-bs-toggle="tooltip" data-bs-placement="top" title="a.golubenko@outlook.com">Написать нам</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callMeModal"><span data-bs-toggle="tooltip" data-bs-placement="top" title="Запрос на обратную связь">Заказать звонок</span></a>
+                    </nav>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+       </div>
+        <hr>
+      </div>
+      <div class="container nTextAll" id="label-contacts">
+        <div class="row d-flex flex-row-reverse">
+          <div class="col-md-5 col-xs-12">
+            <ul class="social-icons">
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><a class="twitter" href="https://twitter.com/want2it"><i class="fa fa-twitter fa-lg"></i></a></li>   
+            <!--  <li title="Facebook"><a class="facebook" href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li> -->
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><a class="instagram insta" href="https://instagram.com/want2it"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+            <!--  <li title="Vkontakte"><a class="vkontakte" href="#"><i class="fa fa-vk fa-lg" aria-hidden="true"></i></a></li> -->
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"><a class="telegram" href="https://t.me/want2it"><i class="fa fa-telegram fa-lg"></i></a></li>   
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin"><a class="linkedin" href="https://linkedin.com/"><i class="fa fa-linkedin fa-lg"></i></a></li> 
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Habr"><a class="habr" href="https://career.habr.com/"><img src="habr-habr.png" width="30px" height="30px" style="opacity: 0.8"></a></li>   
+            </ul>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <p class="copyright-text text-white"><small>© 2022 ООО "Хочу ВАйти" УНП: 392979709 свидетельство о регистрации от 19.05.2022 регистрирующий орган: Мингорисполком EMAIL: <a href="mailto:a.golubenko@outlook.com" data-bs-toggle="tooltip" data-bs-placement="top" title="Email" class="text-warning h6">info@recruiter.by</a></small>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+</footer>  
+<!-- Modals -->
+      <div class="modal fade" id="callMeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callMeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-white bg-darksm rounded-5 border-white">
+      <div class="modal-header" style="border:0">
+        <h5 class="modal-title" id="getnewOrderLabel">Обратный звонок</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>            <form class="needs-validation" novalidate>
+      <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" min="3" id="floatingInput10" placeholder="фамилия Имя" required>
+            <label for="floatingInput10" class="text-warning">Как Вас зовут?</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="tel" id="phone" name="phone" value="+375 (__) ___-__-__" pattern="^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" id="floatingInput11" placeholder="+375 (__) ___-__-__" required>
+            <label for="floatingInput11" class="text-warning">Ваш номер телефона</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="time" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput13" placeholder="Стек">
+            <label for="floatingInput13" class="text-warning">Во сколько набрать?</label>
+              <div class="valid-tooltip">Все хорошо!</div>
+          </div>      
+      </div>
+      <div class="modal-footer mx-auto" style="border:0">
+        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal" style="border-radius: 1.25rem;">Закрыть</button>
+        <button type="submit" class=" orderbtn btn btn-lg">Подтвердить</button>
+          </div></form>
+    </div>
+  </div>
+</div>
+      
+ 
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="form-validation.js"></script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})();
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+  var typed = new Typed('.element', {
+  // Waits 1000ms after typing "First"
+    strings: ['print("Hello World")', 'print("Хочу в IT")', 'print("WANTED!!! IT-специалист")'],
+    typeSpeed: 96,
+    backSpeed: 0,
+    fadeOut: true,
+    loop: true,
+    cursorChar: '',
+
+});
+</script>
+      <script>
+      var scrolled;
+window.onscroll = function() {
+    scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    hei = $("#search-menu").height();
+    if(scrolled > hei){
+        $(".menu").css({"background": "#343a40"})         
+        $(".menu").removeClass("bg-darkss")
+        $(".lg-menu").removeClass("dropup")
+        $(".lg-menu").addClass("dropdown")
+    }
+    if(hei > scrolled){
+        $(".menu").addClass("bg-darkss")
+        $(".lg-menu").addClass("dropup")
+        $(".lg-menu").removeClass("dropdown")
+    }
+
+}
+$('[href^="#"]').on('click', function(){
+  let href = $(this).attr('href'), elem = $(document).find(href);
+  if(elem.length > 0) {
+    let posY = elem.eq(0).offset().top;
+    $('html, body').animate({
+      scrollTop: posY
+    }, 1000);
+  }
+  return false;
+});
+
+function createRipple(event) {
+  const button = event.currentTarget;
+
+  const circle = document.createElement("span");
+  const diameter = Math.max(button.clientWidth, button.clientHeight);
+  const radius = diameter / 2;
+
+  circle.style.width = circle.style.height = `${diameter}px`;
+  circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+  circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+  circle.classList.add("ripple");
+
+  const ripple = button.getElementsByClassName("ripple")[0];
+
+  if (ripple) {
+    ripple.remove();
+  }
+
+  button.appendChild(circle);
+}
+
+const buttons = document.getElementsByClassName("orderbtn");
+for (const button of buttons) {
+  button.addEventListener("click", createRipple);
+}
+      </script>
+     <!-- 
+     <script>
+let nav0 = document.getElementById("nav-0").offsetWidth;
+let nav1 = document.getElementById("nav-1").offsetWidth;
+let nav2 = document.getElementById("nav-2").offsetWidth;
+let nav3 = document.getElementById("nav-3").offsetWidth;
+let nav4 = document.getElementById("nav-4").offsetWidth;
+let nav5 = document.getElementById("nav-5").offsetWidth;
+let nav6 = document.getElementById("nav-6").offsetWidth;
+let nav7 = document.getElementById("nav-7").offsetWidth;
+let all = window.screen.width;
+if(nav0 > 500){
+    let ne = Math.ceil((nav0 - 500)/100);
+    if(ne == 1){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 2){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.removeClass('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 3){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        document.getElementById("nav-5").classList.add('d-none');
+        document.getElementById("nav-5").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 4){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        document.getElementById("nav-5").classList.add('d-none');
+        document.getElementById("nav-5").classList.remove('d-none');
+        document.getElementById("nav-4").classList.add('d-none');
+        document.getElementById("nav-4").classList.remove('d-none');
+        alert(ne);
+    }
+    if(ne == 5){
+        document.getElementById("nav-7").classList.add('d-none');
+        document.getElementById("nav-7").classList.remove('d-none');
+        document.getElementById("nav-6").classList.add('d-none');
+        document.getElementById("nav-6").classList.remove('d-none');
+        document.getElementById("nav-5").classList.add('d-none');
+        document.getElementById("nav-5").classList.remove('d-none');
+        document.getElementById("nav-4").classList.add('d-none');
+        document.getElementById("nav-4").classList.remove('d-none');
+        document.getElementById("nav-3").classList.add('d-none');
+        document.getElementById("nav-3").classList.remove('d-none');
+        alert(ne);
+    }
+alert(ne);
+}
+alert(nav0);
+
+      
+      </script>
+      -->
+  </body>
+</html>
