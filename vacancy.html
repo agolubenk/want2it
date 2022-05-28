@@ -37,7 +37,7 @@ overflow: hidden;
 position: relative;
 height: 2rem;
 line-height: 2rem;
-left: 3rem;
+left: 0.5rem;
 margin-left: -3rem;
 margin-right: 3rem;
 margin-bottom: .25rem;
@@ -787,7 +787,8 @@ a.preicons
     <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
 </symbol>
 </svg>
-<header class="navbar navbar-expand-lg sticky-top text-white bg-darkss menu item" id="search-menu">
+	  
+ <header class="navbar navbar-expand-lg sticky-top text-white bg-darkss menu item" id="item1">
 <div class="container-fluid">
     <a class="navbar-brand text-white" href="index.html">Хочу в IT</a>
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -806,31 +807,21 @@ a.preicons
           <a class="nav-link text-white" id="nav-1" href="prices.html">Цены</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white" id="nav-2" href="blog.html">Блог</a>
+          <a class="nav-link text-white" id="nav-2" href="blog.html">Отзывы</a>
         </li>
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white" id="nav-3" href="about.html">О нас</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white" id="nav-4" href="contacts.html">Контакты</a>
-        </li>
-        <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white" id="nav-5" href="vacancy.html">Вакансии</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white d-none" id="nav-6" href="docs.html">Документы</a>
-        </li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white d-none" id="nav-7" href="#">Оповещения (3)</a>
+          <a class="nav-link text-white" id="nav-5" href="vacancy.html">Работа у нас</a>
         </li>
         <li class="nav-item d-none d-lg-block dropup lg-menu" id="nav-8">
-          <a class="nav-link text-white dropdown-toggle d-none" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Профиль</a>
+          <a class="nav-link text-white dropdown-toggle d-none" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">...</a>
           <ul class="dropdown-menu bg-darkss" aria-labelledby="dropdown01">
-            <li class="d-none" id="drop-1"><a class="dropdown-item text-white bg-darkss" href="prices.html">Цены</a></li>
-            <li class="d-none" id="drop-2"><a class="dropdown-item text-white bg-darkss" href="blog.html">Блог</a></li>
-            <li class="d-none" id="drop-3"><a class="dropdown-item text-white bg-darkss" href="about.html">О нас</a></li>
-            <li class="d-none" id="drop-4"><a class="dropdown-item text-white bg-darkss" href="contacts.html">Контакты</a></li>
-            <li class="d-none" id="drop-5"><a class="dropdown-item text-white bg-darkss" href="vacancy.html">Вакансии (8)</a></li>
+            <li class="d-none" id="drop-5"><a class="dropdown-item text-white bg-darkss" href="vacancy.html">Задачи (8)</a></li>
             <li class="d-none" id="drop-6"><a class="dropdown-item text-white bg-darkss" href="docs.html">Документы</a></li>
             <li class="d-none" id="drop-7"><a class="dropdown-item text-white bg-darkss" href="#">Оповещения (3)</a></li>
             <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="settings.html">Настройки</a></li>
@@ -842,7 +833,8 @@ a.preicons
         <input class="form-control d-none d-lg-block me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
         <button class="btn btn-outline-warning d-none d-lg-block" type="submit">Искать</button>
       </form>
-        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block" href="#" data-bs-toggle="modal" data-bs-target="#getnewOrder">Оставить заявку</button>
+        <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block claps" href="#item2">Оставить заявку</button>
+
         <div class="d-block d-flex justify-content-between d-lg-none pt-3">
     <a class="navbar-brand text-white" href="index.html">Хочу в IT</a>
     <button type="button" class="btn-close btn-close-white p-3" data-bs-dismiss="modal" id="navbar1" aria-label="Close"></button>
@@ -853,16 +845,16 @@ a.preicons
 
       <form class="d-flex py-2 d-none">
         <input class="form-control form-control-lg me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
-        <button class="btn btn-outline-warning btn-lg" type="submit">Искать</button>
+        <button class="btn btn-outline-warning d-none d-lg-block btn-lg" type="submit">Искать</button>
       </form>
                 <ul class="navbar-nav gap-2 pt-2">
-                    <li class="nav-item d-sm-block mb-3"><button class="orderbtn rounded-5 btn mx-auto btn-lg w-100" href="#" data-bs-toggle="modal" data-bs-target="#getnewOrder">Оставить заявку</button></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="services.html"> <big>Услуги</big></a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="prices.html"> <big>Цены</big></a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="blog.html"> <big>Блог</big></a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="about.html"> <big>О нас</big></a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="contacts.html"> <big>Контакты</big></a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="vacancy.html"> <big>Вакансии</big></a></li>
+                    <li class="nav-item d-sm-block mb-3"><a class="nav-link btn btn-lg orderbtn rounded-5" href="#item3" data-bs-dismiss="modal" id="navbar2"> Оставить заявку</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="services.html"> Услуги</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="prices.html"> Цены</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="blog.html"> Отзывы</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="about.html"> О нас</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="vacancy.html"> Вакансии</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="contacts.html"> Работа у нас</a></li>
                 </ul>
                      </div>
                 </div>
@@ -888,18 +880,18 @@ a.preicons
                                     <span class="badge bg-primary">в работе: 2</span>&nbsp;<span class="badge bg-danger">ожидают оплаты: 1</span>&nbsp;<span class="badge bg-success">закрыты: 5</span>
                                 </div>
                             </div>
-                            <a class="btn btn-warning" href="vacancy.html"><i class="bi bi-inboxes-fill fa-lg"></i> Вакансии (8)</a>
-                            <a class="btn btn-warning" href="docs.html"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</a>
-                            <a class="btn btn-warning" href="#"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</a>
-                            <a class="btn btn-warning" href="settings.html"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</a>
+                            <a class="btn btn-warning" href="vacancy.html"><i class="bi bi-inboxes-fill fa-lg"></i> Задачи (8)</a>
+                            <button class="btn btn-warning"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</button>
+                            <button class="btn btn-warning"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</button>
+                            <button class="btn btn-warning"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</button>
                         </div>
                     </div>
                 </div>
         <div class="d-grid gap-2 py-2 fixed-bottom text-end card-body">
-                    <a id="menu-clicker" class="btn btn-warning text-dark btn-lg d-none" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseProfile"><i class="bi bi-emoji-sunglasses-fill fa-lg"></i> Профиль</a>
+                    <a id="menu-clicker" class="btn btn-warning text-dark btn-lg" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseProfile"><i class="bi bi-emoji-sunglasses-fill fa-lg"></i> Профиль</a>
              <!--       <button class="btn btn-lg btn-warning"><i class="bi bi-person-workspace fa-lg"></i> Sign-up</button>
                     <button class="btn btn-outline-warning btn-lg"><i class="bi bi-door-open-fill fa-lg"></i> Sign-in</button> -->
-                    <button class="btn btn-outline-warning btn-lg d-none"><i class="bi bi-box-arrow-right fa-lg"></i> Выход</button>
+                    <button class="btn btn-outline-warning btn-lg"><i class="bi bi-box-arrow-right fa-lg"></i> Выход</button>
                 </div>
             </div>
     </div>
@@ -939,7 +931,7 @@ a.preicons
         <span class="badge my-1 mx-1" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">laravel</span>
     </div>
       </div>
-      <div class="col-md-8 col-lg-8 mx-auto pt-2 pb-2 mb-1">
+      <div class="col-md-8 col-lg-8 mx-auto pb-2 mb-1">
            <div class="pb-2 pt-2 bg-darks  my-auto rounded-5 my-auto container">
           <h2 class="text-warning py-2">Список вакансий:</h2>
           <ul class="fa-ul list-counter-circle">
@@ -967,15 +959,15 @@ a.preicons
 
       <div class="col-md-4 col-lg-4 mx-auto pb-3 mb-1 order-md-last">
            <div class="py-2 pt-2 container bg-darks rounded-5 my-auto" id="archive" style="opacity: 0.6" data-bs-toggle="tooltip" data-bs-placement="top" title="Это архив вакансий. Откликнутся на эти вакансии не получится.">
-          <h3 class="text-warning py-4">Архив вакансий:</h3>
+          <h3 class="text-warning py-2">Архив вакансий:</h3>
           <ul class="fa-ul list-counter-circle">
-              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="left" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="left" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="left" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="left" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a>&nbsp;&nbsp; <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
           
           </ul>
