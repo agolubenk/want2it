@@ -24,7 +24,42 @@
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <style>
-
+.list-counter-circle {
+list-style: none;
+counter-reset: list;
+margin: 0;
+padding: 0;
+overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.list-counter-circle>li {
+position: relative;
+height: 2rem;
+line-height: 2rem;
+left: 3rem;
+margin-left: -3rem;
+margin-right: 3rem;
+margin-bottom: .25rem;
+padding-left: 1rem;
+padding-right: 1.5rem;
+background: transparent!important;
+white-space: nowrap;
+border-radius: 1.25rem;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.list-counter-circle>li:last-child {
+  display: flex;
+  overflow-x: auto;
+border-radius: 1.25rem;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+  
 .opacity-50 { opacity: .5; }
 .opacity-75 { opacity: .75; }
 
@@ -904,23 +939,23 @@ a.preicons
         <span class="badge my-1 mx-1" style="background-color: #fd7e14" data-bs-toggle="tooltip" data-bs-placement="top" title="нет вакансий">laravel</span>
     </div>
       </div>
-      <div class="col-md-10 col-lg-9 mx-auto pt-2 pb-2 mb-1">
+      <div class="col-md-8 col-lg-8 mx-auto pt-2 pb-2 mb-1">
            <div class="pb-2 pt-2 bg-darks  my-auto rounded-5 my-auto container">
           <h2 class="text-warning py-2">Список вакансий:</h2>
-          <ul class="fa-ul">
+          <ul class="fa-ul list-counter-circle">
             <li class="py-2" style="margin-left:-20px; font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
                 <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-            <li class="py-2" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
+            <li class="py-2" style="margin-left:-20px; font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
                 <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-            <li class="py-2" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
+            <li class="py-2" style="margin-left:-20px; font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
                 <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-            <li class="py-2" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
+            <li class="py-2" style="margin-left:-20px; font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
                 <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-            <li class="py-2" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
+            <li class="py-2" style="margin-left:-20px; font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Опыт: 2+ лет.  Стек: Java, Kotlin, Swift, React.    БД: PostgreSQL, MongoDB, Redis. ЗП: $2000-3000. Домен: финтех. Открыто мест: 8"><i class="fa-li bi bi-arrow-right-short mt-2 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171.html" style="text-decoration: none;">Java developer | YourSoft</a>
                 <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-primary text-white">hibernate</span>&nbsp;<span class="badge bg-success text-white">spring</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
           
@@ -929,35 +964,18 @@ a.preicons
 <div id="item3"></div>
 
       </div>
-    </div>
- 
-   <div class="row g-4 mx-auto pt-3">
-      <div class="col-md-7 col-lg-8 mx-auto pb-3 mb-1">
-                  <div class="py-2 text-center pt-2 bg-darks rounded-5 my-auto container" id="partners">
-      <h1 class="text-info py-4">Наши партнеры</h1>
-	<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 text-center mx-auto my-auto">
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="Benefits.by"><img src="benefits-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="DERIV (FX-market)"><img src="deriv-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="Seedilon"><img src="seedilon-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="Vidcrunch"><img src="vidcrunch-logo.svg" width="100vw" class="w-100"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="YourSoft"><img src="yoursoft-logo.svg" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="PremiumSoft"><img src="Premiumsoft-logo.jfif" class="w-100" width="100vw"></div>
-            <div class="col container my-2 py-4 my-auto mx-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="Альфа-Банк Беларусь"><img src="alfabank-logo.png" width="100vw" class="w-100"></div>
-       
-        </div>
-    </div>
-      </div>
-      <div class="col-md-5 col-lg-4 mx-auto pb-3 mb-1 order-md-last">
+
+      <div class="col-md-4 col-lg-4 mx-auto pb-3 mb-1 order-md-last">
            <div class="py-2 pt-2 container bg-darks rounded-5 my-auto" id="archive" style="opacity: 0.6" data-bs-toggle="tooltip" data-bs-placement="top" title="Это архив вакансий. Откликнутся на эти вакансии не получится.">
           <h3 class="text-warning py-4">Архив вакансий:</h3>
-          <ul class="fa-ul">
-              <li class="py-1" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+          <ul class="fa-ul list-counter-circle">
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-              <li class="py-1" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-              <li class="py-1" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
-              <li class="py-1" style="margin-left:-20px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
+              <li class="py-1" style="margin-left:-20px; font-size:12px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Вакансия закрыта 04/04/22"><i class="fa-li bi bi-arrow-right-short mt-1 fa-lg text-warning"></i><a class="text-white h5" href="vacancy-2204171-closed.html" style="text-decoration: none;">Java developer</a> <span class="badge bg-warning text-dark">middle</span>&nbsp;<span class="badge bg-info text-white">java</span>
               </li>
           
           </ul>
