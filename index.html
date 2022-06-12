@@ -8,7 +8,6 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title>Хочу в IT · 2it</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +18,8 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script src="app.js"></script>
 
     <!-- Bootstrap core CSS -->
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<!-- Только CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <style>
 		.claps{
 			display:none;
@@ -745,13 +744,7 @@ a.preicons
           <a class="nav-link text-white active" aria-current="page" href="index.html">Главная</a>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white" href="services.html">Услуги</a>
-        </li>
-        <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white" id="nav-1" href="prices.html">Цены</a>
-        </li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link text-white" id="nav-2" href="blog.html">Отзывы</a>
         </li>
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white" id="nav-3" href="about.html">О нас</a>
@@ -762,21 +755,7 @@ a.preicons
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link text-white" id="nav-5" href="vacancy.html">Работа у нас</a>
         </li>
-        <li class="nav-item d-none d-lg-block dropup lg-menu" id="nav-8">
-          <a class="nav-link text-white dropdown-toggle d-none" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Личный кабинет</a>
-          <ul class="dropdown-menu bg-darkss" aria-labelledby="dropdown01">
-            <li class="d-none" id="drop-5"><a class="dropdown-item text-white bg-darkss" href="vacancy.html">Задачи (8)</a></li>
-            <li class="d-none" id="drop-6"><a class="dropdown-item text-white bg-darkss" href="docs.html">Документы</a></li>
-            <li class="d-none" id="drop-7"><a class="dropdown-item text-white bg-darkss" href="#">Оповещения (3)</a></li>
-            <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="settings.html">Настройки</a></li>
-            <li class="d-none"><a class="dropdown-item text-white bg-darkss" href="#">Выход</a></li>
-          </ul>
-        </li>
       </ul>
-      <form class="d-flex d-none">
-        <input class="form-control d-none d-lg-block me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
-        <button class="btn btn-outline-warning d-none d-lg-block" type="submit">Искать</button>
-      </form>
         <button class="orderbtn rounded-5 btn mx-3 d-none d-lg-block claps" href="#item2">Оставить заявку</button>
 
         <div class="d-block d-flex justify-content-between d-lg-none pt-3">
@@ -785,57 +764,16 @@ a.preicons
             </div>
         <div class="d-sm-block d-lg-none d-grid gap-3">
         <div class="py-2">
-                    <div class="collapse show" id="collapseProfile">
-
-      <form class="d-flex py-2 d-none">
-        <input class="form-control form-control-lg me-2 bg-darks text-white" type="search" style="border: 1px solid #ffc107;" placeholder="Поиск..." aria-label="Search">
-        <button class="btn btn-outline-warning d-none d-lg-block btn-lg" type="submit">Искать</button>
-      </form>
                 <ul class="navbar-nav gap-2 pt-2">
-                    <li class="nav-item d-sm-block mb-3"><a class="nav-link btn btn-lg orderbtn rounded-5" href="#item3" data-bs-dismiss="modal" id="navbar2"> Оставить заявку</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="services.html"> Услуги</a></li>
+                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="prices.html"> Главная</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="prices.html"> Цены</a></li>
-                    <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="blog.html"> Отзывы</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="about.html"> О нас</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="vacancy.html"> Вакансии</a></li>
                     <li class="nav-item d-sm-block"><a class="nav-link btn btn-outline-warning text-white" href="contacts.html"> Работа у нас</a></li>
                 </ul>
-                     </div>
                 </div>
-        <div class="py-2 pt-0">
-                    <div class="collapse" id="collapseProfile">
-                        <div class="card-body d-grid gap-2" style="background-color: transparent">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                            <h3 class="text-warning" style="opacity: 0.8"><i class="bi bi-person-circle"></i>&nbsp;Голубенко Андрей</h3>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                            <h4 class="text-warning" style="opacity: 0.8"><i class="bi bi-building"></i>&nbsp;М21 Хант</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                            <p class="text-warning" style="opacity: 0.7"><i class="bi bi-telephone-fill"></i>&nbsp;+375255553322<br>
-                                    <i class="bi bi-envelope"></i>&nbsp;pochtovi_golub@hotmail.com
-                                    </p>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                            <span class="h4 text-warning" style="opacity: 0.8">Вакансии:</span>
-                                    <span class="badge bg-primary">в работе: 2</span>&nbsp;<span class="badge bg-danger">ожидают оплаты: 1</span>&nbsp;<span class="badge bg-success">закрыты: 5</span>
-                                </div>
-                            </div>
-                            <a class="btn btn-warning" href="vacancy.html"><i class="bi bi-inboxes-fill fa-lg"></i> Задачи (8)</a>
-                            <button class="btn btn-warning"><i class="bi bi-file-earmark-post-fill fa-lg"></i> Документы</button>
-                            <button class="btn btn-warning"><i class="bi bi-lightbulb fa-lg"></i> Оповещения (3)</button>
-                            <button class="btn btn-warning"><i class="bi bi-wrench-adjustable fa-lg"></i> Настройки</button>
-                        </div>
-                    </div>
-                </div>
-        <div class="d-grid gap-2 py-2 fixed-bottom text-end card-body">
-                    <a id="menu-clicker" class="btn btn-warning text-dark btn-lg" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseProfile"><i class="bi bi-emoji-sunglasses-fill fa-lg"></i> Профиль</a>
-             <!--       <button class="btn btn-lg btn-warning"><i class="bi bi-person-workspace fa-lg"></i> Sign-up</button>
-                    <button class="btn btn-outline-warning btn-lg"><i class="bi bi-door-open-fill fa-lg"></i> Sign-in</button> -->
-                    <button class="btn btn-outline-warning btn-lg"><i class="bi bi-box-arrow-right fa-lg"></i> Выход</button>
+        <div class="fixed-bottom mb-3 container">
+           <a class="btn btn-lg orderbtn w-100 rounded-5" href="#item3" data-bs-dismiss="modal" id="navbar2"> Оставить заявку</a>
                 </div>
             </div>
     </div>
@@ -853,33 +791,6 @@ a.preicons
       </div>
       <div class="col-md-7 col-lg-4 col-sm-12 mx-auto pt-3 pb-3 mb-1" id="item2">
           <div class="p-3 pb-4 rounded-5 bg-darks" style="margin-right: -10px; margin-top: -10px; margin-bottom: 10px; margin-left: 0px;">
-        <h4 class="mb-3">
-          <span class="text-warning">Оформить заявку</span>
-        </h4>
-        <form class="needs-validation" novalidate>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя" min="3" required>
-            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
-              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="tel" id="phone" name="phone" value="" pattern="^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" id="floatingInput1" placeholder="+375 (__) ___-__-__" required>
-            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
-              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email" required>
-            <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
-              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите свой email.</div>
-          </div>
-          <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Укажите, какая именно услуга Вам необходима, стек технологий, домен, ФЛ или ЮЛ являетесь, во сколько с Вами можно связаться и каким способом">
-              <textarea type="text" rows="5" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" style="height: 120px;" placeholder="Стек" required min="20"></textarea>
-            <label for="floatingInput3" class="text-warning">Дополнительно</label>
-              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, расскажите чуть больше.</div>
-          </div>      
-        
-            <button type="submit" class="w-100 orderbtn btn btn-lg">Подтвердить</button>
-              </form>
               </div>
       </div>
     </div>
@@ -970,6 +881,39 @@ a.preicons
       </div>
     </div>
     </div>
+	  
+	  
+	          <h4 class="mb-3">
+          <span class="text-warning">Оформить заявку</span>
+        </h4>
+        <form class="needs-validation" novalidate>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control bg-darks text-white  border-white rounded-4" id="floatingInput" placeholder="фамилия Имя" min="3" required>
+            <label for="floatingInput" class="text-warning">Как Вас зовут?</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите имя.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="tel" id="phone" name="phone" value="" pattern="^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$" class="form-control bg-darks b text-white order-white rounded-4" min="13" max="13" id="floatingInput1" placeholder="+375 (__) ___-__-__" required>
+            <label for="floatingInput1" class="text-warning">Ваш номер телефона</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите валидный номер.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput2" placeholder="Email" required>
+            <label for="floatingInput2" class="text-warning">Укажите свой e-mail</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, укажите свой email.</div>
+          </div>
+          <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Укажите, какая именно услуга Вам необходима, стек технологий, домен, ФЛ или ЮЛ являетесь, во сколько с Вами можно связаться и каким способом">
+              <textarea type="text" rows="5" class="form-control bg-darks  text-white border-white rounded-4" id="floatingInput3" style="height: 120px;" placeholder="Стек" required min="20"></textarea>
+            <label for="floatingInput3" class="text-warning">Дополнительно</label>
+              <div class="valid-tooltip">Все хорошо!</div><div class="invalid-tooltip">Пожалуйста, расскажите чуть больше.</div>
+          </div>      
+        
+            <button type="submit" class="w-100 orderbtn btn btn-lg">Подтвердить</button>
+              </form>
+
+	  
+	  
+	  
   </main>
  <hr>
  <footer class="site-footer footer fixed-buttom" id="footer">
@@ -1085,7 +1029,8 @@ a.preicons
 </div>
       
  
-<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Пакет JavaScript с Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="form-validation.js"></script>
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
