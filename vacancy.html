@@ -16,9 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 <script src="app.js"></script>
     <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
 
@@ -947,18 +945,15 @@ a.preicons
 		  </div>
       <div class="col-md-12 mx-auto pb-2 mb-1 g-2">
 		  
-		  <div class="wrapper">
+		  <div class="wrapper mx-auto">
     <div class="">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="row mx-auto">
+            <div class="col-md-8 col-md-offset-2 mx-auto">
                                 
-                <div class="fresh-table full-color-azure">
+                <div class="fresh-table">
                 <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
                         Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
                 -->
-                
-                   
-                    
                     <table id="fresh-table" class="table" style="white-space: nowrap">
                         <thead>
                             <th data-field="id" data-sortable="true">Название&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -1045,7 +1040,7 @@ a.preicons
                             <tr>
                             	<td>Java developer</td>
                             	<td>$2000-6000</td>
-                            	<td>middle</td>
+                            	<td>senior</td>
                             	<td>4</td>
                             	<td>
                      <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
@@ -1362,11 +1357,95 @@ a.preicons
 
 
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="form-validation.js"></script>
 <script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+   <script type="text/javascript">
+        var $table = $('#fresh-table'),
+            $alertBtn = $('#alertBtn'),
+            full_screen = false;
+            
+        $().ready(function(){
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+    
+                showRefresh: true,
+                search: true,
+                showToggle: false,
+                showColumns: true,
+                pagination: true,
+                striped: true,
+                pageSize: 20,
+                pageList: [5,10,15,20],
+                
+                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                    //do nothing here, we don't want to show the text "showing x of y from..." 
+                },
+                formatRecordsPerPage: function(pageNumber){
+                    return pageNumber + "";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+            
+                        
+            
+            $(window).resize(function () {
+                $table.bootstrapTable('resetView');
+            });
+    
+            
+            window.operateEvents = {
+                'click .like': function (e, value, row, index) {
+                    alert('You click like icon, row: ' + JSON.stringify(row));
+                    console.log(value, row, index);
+                },
+                'click .edit': function (e, value, row, index) {
+                    alert('You click edit icon, row: ' + JSON.stringify(row));
+                    console.log(value, row, index);    
+                },
+                'click .remove': function (e, value, row, index) {
+                    $table.bootstrapTable('remove', {
+                        field: 'id',
+                        values: [row.id]
+                    });
+            
+                }
+            };
+            
+            $alertBtn.click(function () {
+                alert("You pressed on Alert");
+            });
+            
+        });
+            
+    
+        function operateFormatter(value, row, index) {
+            return [
+                '<a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
+                    '<i class="fa fa-heart"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
+                    '<i class="fa fa-edit"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
+                    '<i class="fa fa-remove"></i>',
+                '</a>'
+            ].join('');
+        }
+    
+            
+    </script>
+
       <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -1458,9 +1537,7 @@ for (const button of buttons) {
   button.addEventListener("click", createRipple);
 }
       </script>
-    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+
      <!-- 
      <script>
 let nav0 = document.getElementById("nav-0").offsetWidth;
@@ -1526,87 +1603,6 @@ alert(nav0);
       
       </script>
       -->
-   <script type="text/javascript">
-        var $table = $('#fresh-table'),
-            $alertBtn = $('#alertBtn'),
-            full_screen = false;
-            
-        $().ready(function(){
-            $table.bootstrapTable({
-                toolbar: ".toolbar",
-    
-                showRefresh: true,
-                search: true,
-                showToggle: false,
-                showColumns: true,
-                pagination: true,
-                striped: true,
-                pageSize: 5,
-                pageList: [5,10,15,20],
-                
-                formatShowingRows: function(pageFrom, pageTo, totalRows){
-                    //do nothing here, we don't want to show the text "showing x of y from..." 
-                },
-                formatRecordsPerPage: function(pageNumber){
-                    return pageNumber + "";
-                },
-                icons: {
-                    refresh: 'fa fa-refresh',
-                    toggle: 'fa fa-th-list',
-                    columns: 'fa fa-columns',
-                    detailOpen: 'fa fa-plus-circle',
-                    detailClose: 'fa fa-minus-circle'
-                }
-            });
-            
-                        
-            
-            $(window).resize(function () {
-                $table.bootstrapTable('resetView');
-            });
-    
-            
-            window.operateEvents = {
-                'click .like': function (e, value, row, index) {
-                    alert('You click like icon, row: ' + JSON.stringify(row));
-                    console.log(value, row, index);
-                },
-                'click .edit': function (e, value, row, index) {
-                    alert('You click edit icon, row: ' + JSON.stringify(row));
-                    console.log(value, row, index);    
-                },
-                'click .remove': function (e, value, row, index) {
-                    $table.bootstrapTable('remove', {
-                        field: 'id',
-                        values: [row.id]
-                    });
-            
-                }
-            };
-            
-            $alertBtn.click(function () {
-                alert("You pressed on Alert");
-            });
-            
-        });
-            
-    
-        function operateFormatter(value, row, index) {
-            return [
-                '<a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
-                    '<i class="fa fa-heart"></i>',
-                '</a>',
-                '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
-                    '<i class="fa fa-edit"></i>',
-                '</a>',
-                '<a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
-                    '<i class="fa fa-remove"></i>',
-                '</a>'
-            ].join('');
-        }
-    
-            
-    </script>
 
   </body>
 </html>

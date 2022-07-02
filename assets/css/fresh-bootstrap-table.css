@@ -200,7 +200,7 @@
 
 .fixed-table-toolbar .columns label {
   display: block;
-  padding: 3px 20px;
+  padding: 3px 5px;
   clear: both;
   font-weight: normal;
   line-height: 1.428571429;
@@ -210,9 +210,9 @@
 .fixed-table-toolbar .search,
 .fixed-table-toolbar .columns {
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  line-height: 28px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 0px;
 }
 
 .fixed-table-pagination li.disabled a {
@@ -251,7 +251,7 @@
 
 .fixed-table-toolbar .dropdown-menu {
   text-align: left;
-  max-height: 300px;
+  max-height: 100px;
   overflow: auto;
 }
 
@@ -1152,7 +1152,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .fresh-table .fixed-table-toolbar {
   border-radius: 10px 10px 0 0;
-  padding: 10px 10px;
+  padding: 10px 10px 0px 10px;
   color: #666666;
 }
 .fresh-table .fixed-table-toolbar .dropdown-menu {
@@ -1497,7 +1497,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border-left: 0;
 }
 .fresh-table .fixed-table-container thead th .th-inner {
-  padding: 20px 8px 0;
+  padding: 15px 8px 10px;
 }
 .fresh-table .fixed-table-container tbody td {
   border-left: 0;

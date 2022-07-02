@@ -263,7 +263,7 @@
         paginationLastText: '&raquo;',
         search: false,
         strictSearch: false,
-        searchAlign: 'left',
+        searchAlign: 'right',
         selectItemName: 'btSelectItem',
         showHeader: true,
         showFooter: false,
@@ -285,7 +285,7 @@
         clickToSelect: false,
         singleSelect: false,
         toolbar: undefined,
-        toolbarAlign: 'left',
+        toolbarAlign: 'right',
         checkboxHeader: true,
         sortable: true,
         maintainSelected: false,
@@ -404,7 +404,7 @@
             return 'Search';
         },
         formatNoMatches: function () {
-            return 'No matching records found';
+            return 'Таких вакансий нет!';
         },
         formatPaginationSwitch: function () {
             return 'Hide/Show pagination';
@@ -528,7 +528,7 @@
                 '</div>',
                 '<div class="fixed-table-footer"><table><tr></tr></table></div>',
                 this.options.paginationVAlign === 'bottom' || this.options.paginationVAlign === 'both' ?
-                '<div class="fixed-table-pagination"></div>' :
+                '<div class="fixed-table-pagination d-none"></div>' :
                 '',
                 '</div>',
             '</div>'
@@ -904,7 +904,7 @@
         }
 
         // showColumns, showToggle, showRefresh
-        html = [sprintf('<div class="columns columns-%s pull-%s">',
+        html = [sprintf('<div class="columns d-none columns-%s pull-%s">',
             this.options.buttonsAlign, this.options.buttonsAlign)];
 
         if (typeof this.options.icons === 'string') {
@@ -926,16 +926,16 @@
         }
 
         if (this.options.showToggle) {
-            html.push(sprintf('<button class="btn btn-default' + (this.options.iconSize === undefined ? '' : ' btn-' + this.options.iconSize) + '" type="button" name="toggle" title="%s">',
+            html.push(sprintf('<button class="btn btn-default d-none' + (this.options.iconSize === undefined ? '' : ' btn-' + this.options.iconSize) + '" type="button" name="toggle" title="%s">',
                     this.options.formatToggle()),
                 sprintf('<i class="%s %s"></i>', this.options.iconsPrefix, this.options.icons.toggle),
                 '</button>');
         }
 
         if (this.options.showColumns) {
-            html.push(sprintf('<div class="keep-open btn-group" title="%s">',
+            html.push(sprintf('<div class="keep-open btn-group d-none" title="%s">',
                     this.options.formatColumns()),
-                '<button type="button" class="btn btn-default' + (this.options.iconSize == undefined ? '' : ' btn-' + this.options.iconSize) + ' dropdown-toggle" data-toggle="dropdown">',
+                '<button type="button" class="btn btn-default d-none' + (this.options.iconSize == undefined ? '' : ' btn-' + this.options.iconSize) + ' dropdown-toggle" data-toggle="dropdown">',
                 sprintf('<i class="%s %s"></i>', this.options.iconsPrefix, this.options.icons.columns),
                 ' <span class="caret"></span>',
                 '</button>',
@@ -1156,7 +1156,7 @@
             this.options.formatShowingRows(this.pageFrom, this.pageTo, this.options.totalRows),
             '</span>');
 
-        html.push('<span class="page-list">');
+        html.push('<span class="page-list d-none">');
 
         var pageNumber = [
                 sprintf('<span class="btn-group %s">',
