@@ -19,6 +19,14 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="app.js"></script>
+    <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+
 
     <!-- Bootstrap core CSS -->
     <!-- Bootstrap core CSS -->
@@ -941,46 +949,145 @@ a.preicons
 		  </div>
       <div class="col-md-12 mx-auto pb-2 mb-1 g-2">
 		  
-		  <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-        Открытые вакансии
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-		  <div class="d-block d-md-none"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <b class="text-info">3500 - 4000 USD</b><br><span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <div class="d-none d-md-block"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <b class="text-info">3500 - 4000 USD</b>&nbsp;<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <hr>
-		  <div class="d-block d-md-none"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <b class="text-info">3500 - 4000 USD</b><br><span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <div class="d-none d-md-block"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <b class="text-info">3500 - 4000 USD</b>&nbsp;<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <hr>
-		  <div class="d-block d-md-none"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <b class="text-info">3500 - 4000 USD</b><br><span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <div class="d-none d-md-block"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <b class="text-info">3500 - 4000 USD</b>&nbsp;<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  
-		</div>
+		  <div class="wrapper">
+    <div class="">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                                
+                <div class="fresh-table full-color-azure">
+                <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
+                        Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+                -->
+                
+                   
+                    
+                    <table id="fresh-table" class="table" style="white-space: nowrap">
+                        <thead>
+                            <th data-field="id" data-sortable="true">Название&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        	<th data-field="name" data-sortable="true">Вилка&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        	<th data-field="salary" data-sortable="true">Грейд&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        	<th data-field="country">Кол-во&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        	<th data-field="city">Теги&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                  
+                   	<th data-field="cii">Дата&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            	<td>Java developer</td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>PHP developer</td>
+                            	<td>$1800-2700</td>
+                            	<td>middle</td>
+                            	<td>2</td>
+                            	<td>
+                     <span class="badge bg-success text-white">symfony</span>  &nbsp;<span class="badge bg-warning text-dark">sql</span> &nbsp;<span class="badge bg-danger text-white">redis</span>      	  
+                            	 
+                            	</td>
+                            <td>3 дня назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>DevOps engineer</td>
+                            	<td>$2000-5500</td>
+                            	<td>middle</td>
+                            	<td>3</td>
+                            	<td>
+                     <span class="badge bg-success text-white">devops</span>  &nbsp;<span class="badge bg-warning text-dark">openshift</span> &nbsp;<span class="badge bg-danger text-white">ci/cd</span>      	  
+                            	 
+                            	</td>
+                            <td>1 день назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>Java team lead</td>
+                            	<td>$4000-7500</td>
+                            	<td>team-lead</td>
+                            	<td>1</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>3 месяца назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>Java developer</td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>Java developer</td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>Java developer</td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>Java developer</td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+
+                            <tr>
+                            	<td>Java developer</td>
+                            	<td>$2000-6000</td>
+                            	<td>middle</td>
+                            	<td>4</td>
+                            	<td>
+                     <span class="badge bg-success text-white">spring</span>  &nbsp;<span class="badge bg-warning text-dark">postgresql</span> &nbsp;<span class="badge bg-danger text-white">kafka</span>      	  
+                            	 
+                            	</td>
+                            <td>6 дней назад</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                
+                
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Архив
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-				  <div class="d-block d-md-none"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp;<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <div class="d-none d-md-block"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <hr>
-		  <div class="d-block d-md-none"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp;<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <div class="d-none d-md-block"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <hr>
-		  <div class="d-block d-md-none"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp;<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		  <div class="d-none d-md-block"><a class="link-dark h6" href="vacancy-2204171.html" style="text-decoration: none;">Java developer</a>&nbsp; <<span class="badge bg-warning text-dark">java</span>&nbsp;<span class="badge bg-warning text-dark">middle</span>&nbsp;<i class="text-info">18 дней назад</i></div>
-		</div>
-    </div>
-  </div>
 </div>
      <!--      <div class="py-2 rounded-5 my-auto scroll-table">
  <table>
@@ -1417,5 +1524,87 @@ alert(nav0);
       
       </script>
       -->
+   <script type="text/javascript">
+        var $table = $('#fresh-table'),
+            $alertBtn = $('#alertBtn'),
+            full_screen = false;
+            
+        $().ready(function(){
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+    
+                showRefresh: true,
+                search: true,
+                showToggle: false,
+                showColumns: true,
+                pagination: true,
+                striped: true,
+                pageSize: 5,
+                pageList: [5,10,15,20],
+                
+                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                    //do nothing here, we don't want to show the text "showing x of y from..." 
+                },
+                formatRecordsPerPage: function(pageNumber){
+                    return pageNumber + "";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+            
+                        
+            
+            $(window).resize(function () {
+                $table.bootstrapTable('resetView');
+            });
+    
+            
+            window.operateEvents = {
+                'click .like': function (e, value, row, index) {
+                    alert('You click like icon, row: ' + JSON.stringify(row));
+                    console.log(value, row, index);
+                },
+                'click .edit': function (e, value, row, index) {
+                    alert('You click edit icon, row: ' + JSON.stringify(row));
+                    console.log(value, row, index);    
+                },
+                'click .remove': function (e, value, row, index) {
+                    $table.bootstrapTable('remove', {
+                        field: 'id',
+                        values: [row.id]
+                    });
+            
+                }
+            };
+            
+            $alertBtn.click(function () {
+                alert("You pressed on Alert");
+            });
+            
+        });
+            
+    
+        function operateFormatter(value, row, index) {
+            return [
+                '<a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
+                    '<i class="fa fa-heart"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
+                    '<i class="fa fa-edit"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
+                    '<i class="fa fa-remove"></i>',
+                '</a>'
+            ].join('');
+        }
+    
+            
+    </script>
+
   </body>
 </html>
